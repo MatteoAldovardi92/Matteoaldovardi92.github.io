@@ -1,0 +1,10 @@
+---
+title: "Tutoring"
+format: html
+---
+
+Welcome to the **Tutoring** section! Here, you'll find interactive notebooks and resources designed to help students I tutor gain a deeper understanding of various math topics.
+
+## Available Topics
+
+- [Change of Variables Formula for Indefinite Integrals](change_of_variables_in_indefinite_integrals.qmd)

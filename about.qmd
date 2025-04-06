@@ -1,0 +1,23 @@
+## About Me
+
+### Academic Background
+I began my academic journey with a Bachelor's degree in Mathematics, completed in 2018, focusing on algebra, calculus, and probability. My thesis explored the Implicit Function Theorem. In 2022, I went on to earn a Master’s degree in Mathematics, with a thesis titled **[La teoria di Payley Littlewood e alcune sue applicazioni in analisi](https://etd.adm.unipi.it/theses/available/etd-10012022-110009/)**, focusing on Harmonic Analysis. Together with my thesis supervisor, we co-authored the article *A Note on the Fractional Hardy Inequality*, which presents a minor enhancement of Hardy’s inequality and was published in the *Bollettino Unione Matematica Italiana*.  
+In October 2024, I completed a second Master’s degree in Mathematical and Physical Methods (MPM), further developing my skills in mathematical modeling and broadening my understanding of applied mathematics.
+
+### Professional Experience
+As part of the MPM program, I completed a curricular internship at Leonardo Divisione Velivoli, Corso Francia, 426, 10146 Torino. There, I worked on computer vision and 3D deep learning projects, gaining practical experience with cutting-edge technologies and applying my mathematical expertise to solve real-world challenges.
+
+### Career Interests
+I am actively seeking a junior position or internship as a data analyst or machine learning practitioner, with a particular interest in applying mathematical and data-driven methods to real-world problems.
+
+### Selected Publications and Projects
+- *Article: "A Note on the Fractional Hardy Inequality"* published in *Bollettino Unione Matematica Italiana* (2023): [Read the article](https://doi.org/10.1007/s40574-023-00359-7)
+
+
+## Contact
+
+You can reach me via [email](mailto:aldovardimatteo25@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/matteo-aldovardi-63520b257).
+
+## Download CV
+
+My CV is available for download [here](https://drive.google.com/file/d/1SyYG8UxPTUUuVwG9SVNIhwt3mdk5LSuv/view).

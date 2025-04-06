@@ -1,0 +1,131 @@
+topic: "Highschool Integrals"  
+author: "Matteo Aldovardi"  
+---
+
+## Introduction
+
+In this article, we’ll explore the basic concept of integrals, focusing on the change of variable formula. We’ll look at how substitution is used to simplify integrals, and discuss the difference between formal and rigorous steps in mathematical reasoning. Through a practical example, you’ll see how these techniques are applied to solve integrals efficiently. This content is intended for high school students to help build a solid foundation for understanding calculus concepts.
+
+## 1. **Indefinite Integrals**
+
+An indefinite integral represents a family of functions that share the same derivative. It is denoted as:
+
+$$
+\int f(x)\,dx
+$$
+
+For example:  
+
+$$
+\int \frac{1}{1+x^2} \, dx = \arctan(x) + C.
+$$
+
+### Substitution:
+
+The substitution rule states:  
+
+$$
+\int f(g(x)) \cdot g'(x) \, dx = \int f(u) \, du.
+$$
+
+This formula becomes easier to remember if you write $u(x)$ in place of $g(x)$, using the same letter to denote both the function and the variable. Formally, we can write:
+
+$$
+\int f(u(x)) \cdot \frac{d u}{d x} \, dx = \int f(u) \, du.
+$$
+
+The $dx$ terms seem to "cancel," though this is a *formal passage*—not rigorous, but effective. Similarly, manipulations in specific examples often rely on such formal simplifications.
+
+**What does "formally" mean when we oppose it to "rigorously"?**
+
+In mathematics, formal steps refer to symbolic manipulations suggested by the notation, which may or may not rely on rigorous definitions. For example, treating $dx$ as a fraction or canceling terms might not initially be fully justified, but these steps often align with rigorous reasoning and lead to correct results. Formal does not imply a lack of rigor—it highlights a focus on notation and rules rather than detailed justification.
+
+### Practical Example:
+
+Evaluate the integral:
+
+$$
+\int \frac{6 \cdot x}{1 + 9 \cdot x^4} \, dx.
+$$
+
+Using the substitution $u = 3 \cdot x^2$, we compute $\frac{du}{dx} = 6 \cdot x$. Formally, multiplying through by $dx$ and dividing by $6 \cdot x$ gives:
+
+$$
+dx = \frac{du}{6 \cdot x}.
+$$
+
+Substituting **formally** into the integral, we proceed as follows:
+
+$$
+\int \frac{6x}{1 + (3 \cdot x^2)^2} \, dx = \int \frac{6 \cdot x}{1 + u^2} \, dx 
+= \int \frac{6 \cdot x}{1 + u^2} \cdot \frac{1}{6 \cdot x} \, du = \int \frac{1}{1 + u^2} \, du.
+$$
+
+Finally:
+
+$$
+\int \frac{du}{1 + u^2} = \arctan(u) + C = \arctan(3 \cdot x^2) + C.
+$$
+
+## Warnings:
+
+The steps above involve *formal passages* because:  
+- The nature of $dx$ and $du$ is not rigorously defined.  
+- Division by terms like $6 \cdot x$ implicitly assumes $\frac{du}{dx} \neq 0$.  
+
+These manipulations simplify computations but should be justified rigorously in more advanced contexts.
+
+
+
+## A sketch of the proof of the Change of Variable Formula:
+
+Let $F(u)$ be a primitive of $f(u)$, meaning $F'(u) = f(u)$. Then, by the definition of an indefinite integral, we can write
+$$
+F(u) = \int f(u) \, du.
+$$
+
+But since $u = u(x)$, it is also true that $F(u) = F(u(x))$.
+By differentiating with respect to $x$, we obtain
+
+$$
+\frac{d}{dx} F(u(x)) = \frac{d F}{d u} \cdot \frac{d u}{dx} = f(u(x)) \cdot \frac{du}{dx}.
+$$
+Thus, $F(u(x))$ is a primitive of the function
+
+$$
+f(u(x)) \cdot \frac{d u}{dx},
+$$
+or equivalently,
+
+$$
+F(u(x)) = \int f(u(x)) \cdot \frac{d u}{dx} \, dx.
+$$
+Finally, we conclude using the following chain of equalities:
+
+$$
+\int f(u) \, du = F(u) = F(u(x)) = \int f(u(x)) \cdot \frac{d u}{dx} \, dx.
+$$
+
+
+### Footnote:
+
+I am aware that indefinite integrals can be misleading, as they might lead students to believe that the only primitives of  
+
+$$ 
+\frac{1}{x} 
+$$  
+
+are functions of the form  
+
+$$ 
+\ln(\vert x \vert ) + C,
+$$  
+where $C$ is a real number.
+
+Indeed, it is common to write:  
+
+$$ 
+\int \frac{1}{x} \, dx = \ln (\vert x \vert ) + C. 
+$$  
+
+At an introductory high school level, my goal is to keep things as straightforward as possible. This topic might be explored in another post about derivatives defined on intervals.

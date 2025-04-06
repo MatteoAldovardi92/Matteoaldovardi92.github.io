@@ -1,0 +1,226 @@
+[
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "My Portfolio",
+    "section": "",
+    "text": "Here are some of the key projects and publications I’ve worked on:\n\nInternship with Leonardo in 3D Deep Learning:\n\nAs part of the Master’s in Mathematical and Physical Models for Engineering, I completed a curricular internship at Leonardo Divisione Velivoli in Turin. During this time, I focused on reconstructing 3D scenes from 2D images, combining computer vision techniques with 3D deep learning frameworks. This hands-on experience allowed me to explore how machine learning can address the limitations of traditional photogrammetry, applying my mathematical expertise to develop innovative solutions in aerospace applications.\n\nPublication: A Note on Hardy’s Inequality for Pseudo-Differential Operators\nThis publication explores applications of Hardy’s inequality within the realm of pseudo-differential operators, contributing insights into mathematical analysis and operator theory."
+  },
+  {
+    "objectID": "blog/post_18-09-24.html",
+    "href": "blog/post_18-09-24.html",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "This post details how to train a Proximal Policy Optimization (PPO) agent on the CartPole environment using the stable-baselines3 library and visualize the agent’s performance through video. This exercise replicates the methods demonstrated in Nicholas Renotte’s tutorial, “Reinforcement Learning in 3 Hours | Full Course using Python”, available on YouTube.\nThe CartPole environment, part of the Gymnasium library, features a simple cart with a pole balanced on top. The cart can move left or right, and the goal is to keep the pole upright. Rewards are given for each time step the pole remains balanced. If the pole deviates more than 15 degrees from the vertical, the episode ends.\nIn the following sections, I will walk you through the process of training an agent to keep the pole in equilibrium throughout a simulation of 200 time steps, and demonstrate the results using videos of both random and trained policies.\n\n\n\nImage : CartPole\n\n\n\n\nThe following commands are required to set up the environment in Google Colab or a similar environment. These install stable-baselines3, OpenAI Gym (now Gymnasium), and additional tools for rendering and video recording:\n!pip install stable_baselines3[extra]\n!apt-get install -y xvfb python-opengl ffmpeg\n!pip install gymnasium pyvirtualdisplay\n\n\n\nThe classic CartPole-v0 environment is used, where the task is to balance a pole on a cart by applying forces to the left or right. The environment is initialized with render_mode=“rgb_array” to capture frames for rendering videos.\nimport gymnasium as gym\nimport imageio\nfrom IPython.display import Video\n\nenv = gym.make(\"CartPole-v0\", render_mode=\"rgb_array\")\nobs, info = env.reset()\n\nframes = []\ndone = False\n\n# Capture a single episode with a random policy\nepisode = 5\nfor episode in range(1, episode+1):\n    state = env.reset()\n    done = False\n    score = 0\n\n    while not done:\n        frame = env.render()  # Capture frame by frame\n        frames.append(frame)\n        action = env.action_space.sample()  # Random action\n        obs, reward, done, _, info = env.step(action)\n\n# Save the video\nvideo_filename = '../images/blog/post_18-09-24/cartpole_random_policy.mp4'\nimageio.mimsave(video_filename, frames, fps=30)\n\n\nVideo\nVideo: Random Agent\n\n\n\n\n\nThe PPO model is trained for 200,000 timesteps using stable-baselines3. The environment is vectorized using DummyVecEnv, which allows multiple environments to be run in parallel, but in this case, only one instance is used.\nimport gym\nfrom stable_baselines3 import PPO\nfrom stable_baselines3.common.vec_env import DummyVecEnv\nfrom stable_baselines3.common.evaluation import evaluate_policy\n\n# Define environment\nenvironment_name = \"CartPole-v0\"\nenv = gym.make(environment_name)\n\n# Log directory\nlog_path = '/content/training/logs'\nos.makedirs(log_path, exist_ok=True)\n\n# Vectorize the environment for PPO\nenv = DummyVecEnv([lambda: gym.make(environment_name, render_mode=\"rgb_array\")])\n\n# Train PPO model\nmodel = PPO('MlpPolicy', env, verbose=1, tensorboard_log=log_path)\nmodel.learn(total_timesteps=200000)\n\n# Save the trained model\nPPO_Path = '/content/drive/My Drive/training/saved_Models/PPO_Model_Cartpole'\nos.makedirs(PPO_Path, exist_ok=True)\nmodel.save(PPO_Path)\n\n\n\nAfter training, the model’s performance is evaluated over 10 episodes. The evaluation provides two metrics:\n\nMean reward: The average reward across the episodes.\nStandard deviation of reward: A measure of how consistent the performance is across episodes.\n\nmodel = PPO.load('/content/drive/MyDrive/training/saved_Models/PPO_Model_Cartpole.zip', env=env)\nmean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)\nprint(f\"Mean reward: {mean_reward}, Std reward: {std_reward}\")\n\n\nThe evaluation outputs:\nMean reward: 200.0, Std reward: 0.0\nMean reward: 200.0: This indicates that the agent has consistently achieved the maximum reward of 200 points, the upper limit for the CartPole-v0 environment. It means the agent has learned an optimal policy, balancing the pole perfectly in all episodes.\nStandard deviation (Std reward): 0.0: A standard deviation of 0.0 indicates no variation in the agent’s performance across the 10 episodes. This consistency demonstrates that the agent’s behavior is stable and reliable, without any fluctuations in performance.\n\n\n\n\nAfter training, the agent’s performance can be visualized by running it in the environment and capturing frames for a video. The following code captures the agent’s behavior for 1,000 timesteps.\n# Initialize the environment for video capture\nenv = DummyVecEnv([lambda: gym.make(\"CartPole-v0\", render_mode=\"rgb_array\")])\nobs = env.reset()\n\nframes = []\n\n# Run the trained model and capture frames\nfor _ in range(1000):\n    action, _states = model.predict(obs)\n    obs, reward, done, info = env.step(action)\n    frames.append(env.render(mode=\"rgb_array\"))\n\n    if done:\n        obs = env.reset()\n\n# Save the video\nvideo_filename = '../images/blog/post_18-09-24/cartpole_trained_agent.mp4'\nimageio.mimsave(video_filename, frames, fps=30)\n\n\nVideo\nVideo: Trained Agent\n\n\n\n\n\nThis post demonstrates how to train a PPO agent on the CartPole environment using stable-baselines3, evaluate its performance, and visualize the results through video. The trained agent achieves consistent and optimal performance, balancing the pole perfectly across all evaluation episodes. This approach can be applied to other environments and tasks for reinforcement learning research and development.\n\n\n\nThe code used in this post is adapted from Nicholas Renotte’s tutorial, “Reinforcement Learning in 3 Hours | Full Course using Python”, available on YouTube. The video provides an excellent walkthrough of training and evaluating reinforcement learning agents using stable-baselines3."
+  },
+  {
+    "objectID": "blog/post_18-09-24.html#environment-setup",
+    "href": "blog/post_18-09-24.html#environment-setup",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "The following commands are required to set up the environment in Google Colab or a similar environment. These install stable-baselines3, OpenAI Gym (now Gymnasium), and additional tools for rendering and video recording:\n!pip install stable_baselines3[extra]\n!apt-get install -y xvfb python-opengl ffmpeg\n!pip install gymnasium pyvirtualdisplay"
+  },
+  {
+    "objectID": "blog/post_18-09-24.html#initializing-the-environment",
+    "href": "blog/post_18-09-24.html#initializing-the-environment",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "The classic CartPole-v0 environment is used, where the task is to balance a pole on a cart by applying forces to the left or right. The environment is initialized with render_mode=“rgb_array” to capture frames for rendering videos.\nimport gymnasium as gym\nimport imageio\nfrom IPython.display import Video\n\nenv = gym.make(\"CartPole-v0\", render_mode=\"rgb_array\")\nobs, info = env.reset()\n\nframes = []\ndone = False\n\n# Capture a single episode with a random policy\nepisode = 5\nfor episode in range(1, episode+1):\n    state = env.reset()\n    done = False\n    score = 0\n\n    while not done:\n        frame = env.render()  # Capture frame by frame\n        frames.append(frame)\n        action = env.action_space.sample()  # Random action\n        obs, reward, done, _, info = env.step(action)\n\n# Save the video\nvideo_filename = '../images/blog/post_18-09-24/cartpole_random_policy.mp4'\nimageio.mimsave(video_filename, frames, fps=30)\n\n\nVideo\nVideo: Random Agent"
+  },
+  {
+    "objectID": "blog/post_18-09-24.html#training-the-ppo-model",
+    "href": "blog/post_18-09-24.html#training-the-ppo-model",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "The PPO model is trained for 200,000 timesteps using stable-baselines3. The environment is vectorized using DummyVecEnv, which allows multiple environments to be run in parallel, but in this case, only one instance is used.\nimport gym\nfrom stable_baselines3 import PPO\nfrom stable_baselines3.common.vec_env import DummyVecEnv\nfrom stable_baselines3.common.evaluation import evaluate_policy\n\n# Define environment\nenvironment_name = \"CartPole-v0\"\nenv = gym.make(environment_name)\n\n# Log directory\nlog_path = '/content/training/logs'\nos.makedirs(log_path, exist_ok=True)\n\n# Vectorize the environment for PPO\nenv = DummyVecEnv([lambda: gym.make(environment_name, render_mode=\"rgb_array\")])\n\n# Train PPO model\nmodel = PPO('MlpPolicy', env, verbose=1, tensorboard_log=log_path)\nmodel.learn(total_timesteps=200000)\n\n# Save the trained model\nPPO_Path = '/content/drive/My Drive/training/saved_Models/PPO_Model_Cartpole'\nos.makedirs(PPO_Path, exist_ok=True)\nmodel.save(PPO_Path)"
+  },
+  {
+    "objectID": "blog/post_18-09-24.html#evaluating-the-model",
+    "href": "blog/post_18-09-24.html#evaluating-the-model",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "After training, the model’s performance is evaluated over 10 episodes. The evaluation provides two metrics:\n\nMean reward: The average reward across the episodes.\nStandard deviation of reward: A measure of how consistent the performance is across episodes.\n\nmodel = PPO.load('/content/drive/MyDrive/training/saved_Models/PPO_Model_Cartpole.zip', env=env)\nmean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)\nprint(f\"Mean reward: {mean_reward}, Std reward: {std_reward}\")\n\n\nThe evaluation outputs:\nMean reward: 200.0, Std reward: 0.0\nMean reward: 200.0: This indicates that the agent has consistently achieved the maximum reward of 200 points, the upper limit for the CartPole-v0 environment. It means the agent has learned an optimal policy, balancing the pole perfectly in all episodes.\nStandard deviation (Std reward): 0.0: A standard deviation of 0.0 indicates no variation in the agent’s performance across the 10 episodes. This consistency demonstrates that the agent’s behavior is stable and reliable, without any fluctuations in performance."
+  },
+  {
+    "objectID": "blog/post_18-09-24.html#visualizing-the-trained-agent",
+    "href": "blog/post_18-09-24.html#visualizing-the-trained-agent",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "After training, the agent’s performance can be visualized by running it in the environment and capturing frames for a video. The following code captures the agent’s behavior for 1,000 timesteps.\n# Initialize the environment for video capture\nenv = DummyVecEnv([lambda: gym.make(\"CartPole-v0\", render_mode=\"rgb_array\")])\nobs = env.reset()\n\nframes = []\n\n# Run the trained model and capture frames\nfor _ in range(1000):\n    action, _states = model.predict(obs)\n    obs, reward, done, info = env.step(action)\n    frames.append(env.render(mode=\"rgb_array\"))\n\n    if done:\n        obs = env.reset()\n\n# Save the video\nvideo_filename = '../images/blog/post_18-09-24/cartpole_trained_agent.mp4'\nimageio.mimsave(video_filename, frames, fps=30)\n\n\nVideo\nVideo: Trained Agent"
+  },
+  {
+    "objectID": "blog/post_18-09-24.html#conclusion",
+    "href": "blog/post_18-09-24.html#conclusion",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "This post demonstrates how to train a PPO agent on the CartPole environment using stable-baselines3, evaluate its performance, and visualize the results through video. The trained agent achieves consistent and optimal performance, balancing the pole perfectly across all evaluation episodes. This approach can be applied to other environments and tasks for reinforcement learning research and development."
+  },
+  {
+    "objectID": "blog/post_18-09-24.html#credits",
+    "href": "blog/post_18-09-24.html#credits",
+    "title": "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3",
+    "section": "",
+    "text": "The code used in this post is adapted from Nicholas Renotte’s tutorial, “Reinforcement Learning in 3 Hours | Full Course using Python”, available on YouTube. The video provides an excellent walkthrough of training and evaluating reinforcement learning agents using stable-baselines3."
+  },
+  {
+    "objectID": "blog/post_11-09-24.html",
+    "href": "blog/post_11-09-24.html",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "",
+    "text": "In this post, I’ll demonstrate how to implement the K-Nearest Neighbors (KNN) algorithm from scratch in Python. We will apply the algorithm to the Iris dataset, visualize the classification results, and include images of the predicted Iris flower types."
+  },
+  {
+    "objectID": "blog/post_11-09-24.html#overview",
+    "href": "blog/post_11-09-24.html#overview",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "",
+    "text": "In this post, I’ll demonstrate how to implement the K-Nearest Neighbors (KNN) algorithm from scratch in Python. We will apply the algorithm to the Iris dataset, visualize the classification results, and include images of the predicted Iris flower types."
+  },
+  {
+    "objectID": "blog/post_11-09-24.html#the-iris-dataset",
+    "href": "blog/post_11-09-24.html#the-iris-dataset",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "The Iris Dataset",
+    "text": "The Iris Dataset\nThe Iris dataset consists of measurements from three types of Iris flowers: Setosa, Versicolor, and Virginica. For this demonstration, we’ll focus on Iris Setosa and Iris Versicolor.\n\nReplicating the KNN Algorithm\nHere’s a brief overview of the KNN algorithm implemented from scratch:\nimport numpy as np\nfrom collections import Counter\n\ndef distance(x, y):\n    return np.linalg.norm(x - y)\n\ndef scan_sorroundings(dataset, x, k):\n    distances = []\n    for point in dataset:\n        coord, label = point[0], point[1]\n        dist = distance(x, coord)\n        distances.append((dist, label))\n    distances.sort(key=lambda pair: pair[0])\n    return [label for _, label in distances[:k]]\n\ndef classify_new_point(dataset, x, k):\n    neighbors = scan_sorroundings(dataset, x, k)\n    most_common_label = Counter(neighbors).most_common(1)[0][0]\n    return most_common_label"
+  },
+  {
+    "objectID": "blog/post_11-09-24.html#testing-on-the-iris-dataset",
+    "href": "blog/post_11-09-24.html#testing-on-the-iris-dataset",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "Testing on the Iris Dataset",
+    "text": "Testing on the Iris Dataset\nWe applied the KNN algorithm to the Iris dataset, focusing on two classes: Iris Setosa and Iris Versicolor. Here’s the code for loading the dataset and classifying a new point:\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\n\niris = load_iris()\ndata = iris['data']\nlabels = iris['target']\n\nbinary_data = data[labels != 2][:, :2]\nbinary_labels = labels[labels != 2]\n\ntrain_data, test_data, train_labels, test_labels = train_test_split(binary_data, binary_labels, test_size=0.2, random_state=42)\ntrain_dataset = [(train_data[i], train_labels[i]) for i in range(len(train_data))]\n\ntest_point = test_data[0]\nk = 3\nassigned_label = classify_new_point(train_dataset, test_point, k)"
+  },
+  {
+    "objectID": "blog/post_11-09-24.html#visualizing-the-results",
+    "href": "blog/post_11-09-24.html#visualizing-the-results",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "Visualizing the Results",
+    "text": "Visualizing the Results\nThe following code visualizes the dataset and includes an image of the predicted flower type:\nimport matplotlib.pyplot as plt\nimport matplotlib.image as mpimg\n\ndef plot_knn_result_with_image(dataset, x, k, assigned_label):\n    A_points = np.array([point[0] for point in dataset if point[1] == 0])\n    B_points = np.array([point[0] for point in dataset if point[1] == 1])\n\n    plt.scatter(A_points[:, 0], A_points[:, 1], color='red', label='Iris Setosa')\n    plt.scatter(B_points[:, 0], B_points[:, 1], color='blue', label='Iris Versicolor')\n\n    if assigned_label == 0:\n        plt.scatter(x[0], x[1], color='red', marker='x', s=100)\n        image_path = 'iris_setosa.jpg'\n    else:\n        plt.scatter(x[0], x[1], color='blue', marker='x', s=100)\n        image_path = 'iris_versicolor.jpg'\n\n    plt.legend()\n    plt.xlabel('Sepal Length')\n    plt.ylabel('Sepal Width')\n    plt.title(f'KNN Classification (k={k})')\n    plt.show()\n\n    img = mpimg.imread(image_path)\n    plt.imshow(img)\n    plt.axis('off')\n    plt.title(f'Predicted Flower: {\"Iris Setosa\" if assigned_label == 0 else \"Iris Versicolor\"}')\n    plt.show()\n\nplot_knn_result_with_image(train_dataset, test_point, k, assigned_label)"
+  },
+  {
+    "objectID": "blog/post_11-09-24.html#plot-of-a-classification-result",
+    "href": "blog/post_11-09-24.html#plot-of-a-classification-result",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "Plot of a classification result",
+    "text": "Plot of a classification result\n\n\n\nFigure 1: Classification of a test point"
+  },
+  {
+    "objectID": "blog/post_11-09-24.html#the-two-species-of-iris-classified",
+    "href": "blog/post_11-09-24.html#the-two-species-of-iris-classified",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "The two species of iris classified",
+    "text": "The two species of iris classified\n\n\n\n\n\n\nFigure 2: Iris Versicolor\n\n\n\n\n\n\n\nFigure 3: Iris Setosa\n\n\n\n\n\n\nPhoto of Iris Versicolor (Blue flag flower) by Danielle Langlois, taken in July 2005 at Forillon National Park, Quebec, Canada. License: CC BY-SA 3.0. File.\n\n\nPhoto of Iris Setosa by Radomil. License: GNU Free Documentation License, Version 1.2 or later."
+  },
+  {
+    "objectID": "blog/post_11-09-24.html#credits",
+    "href": "blog/post_11-09-24.html#credits",
+    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "section": "Credits",
+    "text": "Credits\n\nK-Nearest Neighbors Algorithm:\nThis implementation was adapted from the tutorial provided by Jason Brownlee, “Tutorial to Implement k-Nearest Neighbors in Python from Scratch.”\nSource: Machine Learning Mastery\nIris Dataset:\nThe dataset used in this post is the famous Iris dataset. It is available through the Scikit-learn library.\nVisualizations:\nVisualizations were created using the Matplotlib library."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Site",
+    "section": "",
+    "text": "Image generated using DALL·E 3"
+  },
+  {
+    "objectID": "index.html#recent-posts",
+    "href": "index.html#recent-posts",
+    "title": "Welcome to My Site",
+    "section": "Recent Posts",
+    "text": "Recent Posts\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\nImplementing K-Nearest Neighbor with Python"
+  },
+  {
+    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html",
+    "href": "tutoring/change_of_variables_in_indefinite_integrals.html",
+    "title": "",
+    "section": "",
+    "text": "topic: “Highschool Integrals”\nauthor: “Matteo Aldovardi”"
+  },
+  {
+    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#introduction",
+    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#introduction",
+    "title": "",
+    "section": "Introduction",
+    "text": "Introduction\nIn this article, we’ll explore the basic concept of integrals, focusing on the change of variable formula. We’ll look at how substitution is used to simplify integrals, and discuss the difference between formal and rigorous steps in mathematical reasoning. Through a practical example, you’ll see how these techniques are applied to solve integrals efficiently. This content is intended for high school students to help build a solid foundation for understanding calculus concepts."
+  },
+  {
+    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#indefinite-integrals",
+    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#indefinite-integrals",
+    "title": "",
+    "section": "1. Indefinite Integrals",
+    "text": "1. Indefinite Integrals\nAn indefinite integral represents a family of functions that share the same derivative. It is denoted as:\n\\[\n\\int f(x)\\,dx\n\\]\nFor example:\n\\[\n\\int \\frac{1}{1+x^2} \\, dx = \\arctan(x) + C.\n\\]\n\nSubstitution:\nThe substitution rule states:\n\\[\n\\int f(g(x)) \\cdot g'(x) \\, dx = \\int f(u) \\, du.\n\\]\nThis formula becomes easier to remember if you write \\(u(x)\\) in place of \\(g(x)\\), using the same letter to denote both the function and the variable. Formally, we can write:\n\\[\n\\int f(u(x)) \\cdot \\frac{d u}{d x} \\, dx = \\int f(u) \\, du.\n\\]\nThe \\(dx\\) terms seem to “cancel,” though this is a formal passage—not rigorous, but effective. Similarly, manipulations in specific examples often rely on such formal simplifications.\nWhat does “formally” mean when we oppose it to “rigorously”?\nIn mathematics, formal steps refer to symbolic manipulations suggested by the notation, which may or may not rely on rigorous definitions. For example, treating \\(dx\\) as a fraction or canceling terms might not initially be fully justified, but these steps often align with rigorous reasoning and lead to correct results. Formal does not imply a lack of rigor—it highlights a focus on notation and rules rather than detailed justification.\n\n\nPractical Example:\nEvaluate the integral:\n\\[\n\\int \\frac{6 \\cdot x}{1 + 9 \\cdot x^4} \\, dx.\n\\]\nUsing the substitution \\(u = 3 \\cdot x^2\\), we compute \\(\\frac{du}{dx} = 6 \\cdot x\\). Formally, multiplying through by \\(dx\\) and dividing by \\(6 \\cdot x\\) gives:\n\\[\ndx = \\frac{du}{6 \\cdot x}.\n\\]\nSubstituting formally into the integral, we proceed as follows:\n\\[\n\\int \\frac{6x}{1 + (3 \\cdot x^2)^2} \\, dx = \\int \\frac{6 \\cdot x}{1 + u^2} \\, dx\n= \\int \\frac{6 \\cdot x}{1 + u^2} \\cdot \\frac{1}{6 \\cdot x} \\, du = \\int \\frac{1}{1 + u^2} \\, du.\n\\]\nFinally:\n\\[\n\\int \\frac{du}{1 + u^2} = \\arctan(u) + C = \\arctan(3 \\cdot x^2) + C.\n\\]"
+  },
+  {
+    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#warnings",
+    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#warnings",
+    "title": "",
+    "section": "Warnings:",
+    "text": "Warnings:\nThe steps above involve formal passages because:\n- The nature of \\(dx\\) and \\(du\\) is not rigorously defined.\n- Division by terms like \\(6 \\cdot x\\) implicitly assumes \\(\\frac{du}{dx} \\neq 0\\).\nThese manipulations simplify computations but should be justified rigorously in more advanced contexts."
+  },
+  {
+    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#a-sketch-of-the-proof-of-the-change-of-variable-formula",
+    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#a-sketch-of-the-proof-of-the-change-of-variable-formula",
+    "title": "",
+    "section": "A sketch of the proof of the Change of Variable Formula:",
+    "text": "A sketch of the proof of the Change of Variable Formula:\nLet \\(F(u)\\) be a primitive of \\(f(u)\\), meaning \\(F'(u) = f(u)\\). Then, by the definition of an indefinite integral, we can write \\[\nF(u) = \\int f(u) \\, du.\n\\]\nBut since \\(u = u(x)\\), it is also true that \\(F(u) = F(u(x))\\). By differentiating with respect to \\(x\\), we obtain\n\\[\n\\frac{d}{dx} F(u(x)) = \\frac{d F}{d u} \\cdot \\frac{d u}{dx} = f(u(x)) \\cdot \\frac{du}{dx}.\n\\] Thus, \\(F(u(x))\\) is a primitive of the function\n\\[\nf(u(x)) \\cdot \\frac{d u}{dx},\n\\] or equivalently,\n\\[\nF(u(x)) = \\int f(u(x)) \\cdot \\frac{d u}{dx} \\, dx.\n\\] Finally, we conclude using the following chain of equalities:\n\\[\n\\int f(u) \\, du = F(u) = F(u(x)) = \\int f(u(x)) \\cdot \\frac{d u}{dx} \\, dx.\n\\]\n\nFootnote:\nI am aware that indefinite integrals can be misleading, as they might lead students to believe that the only primitives of\n\\[\n\\frac{1}{x}\n\\]\nare functions of the form\n\\[\n\\ln(\\vert x \\vert ) + C,\n\\]\nwhere \\(C\\) is a real number.\nIndeed, it is common to write:\n\\[\n\\int \\frac{1}{x} \\, dx = \\ln (\\vert x \\vert ) + C.\n\\]\nAt an introductory high school level, my goal is to keep things as straightforward as possible. This topic might be explored in another post about derivatives defined on intervals."
+  },
+  {
+    "objectID": "tutoring/index.html",
+    "href": "tutoring/index.html",
+    "title": "Tutoring",
+    "section": "",
+    "text": "Welcome to the Tutoring section! Here, you’ll find interactive notebooks and resources designed to help students I tutor gain a deeper understanding of various math topics."
+  },
+  {
+    "objectID": "tutoring/index.html#available-topics",
+    "href": "tutoring/index.html#available-topics",
+    "title": "Tutoring",
+    "section": "Available Topics",
+    "text": "Available Topics\n\nChange of Variables Formula for Indefinite Integrals"
+  },
+  {
+    "objectID": "blog/post_08-11-24.html",
+    "href": "blog/post_08-11-24.html",
+    "title": "Understanding PCA with the Olivetti Faces Dataset",
+    "section": "",
+    "text": "PCA Implementation and Comparison with sklearn\nIn this notebook, I explore Principal Component Analysis (PCA) using the Olivetti Faces dataset, which is available through the sklearn library.\nIn the first part, I apply PCA using the official sklearn implementation to compress one of the images in the dataset into a subspace defined by eigenvectors that explain 90% of the variance. The result is visualized for comparison. The code for this section is taken directly from the official sklearn website and is licensed under the BSD 3-Clause License. The full license text, including the copyright notice and disclaimer, is included in the source code provided.\nIn the second part, I implement a basic, custom version of PCA and apply it to compress the same image into a subspace defined by the eigenvectors that explain 90% of the variance. I then compare the results of this custom (naive) implementation with those obtained using the sklearn PCA algorithm.\nLicense Information: The code from the official sklearn website, used in the first part of this notebook, is licensed under the BSD 3-Clause License. The full text of the license can be found below."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Posts by Date:",
+    "section": "",
+    "text": "September 11, 2024: Implementing K-Nearest Neighbor with Python\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "",
+    "section": "",
+    "text": "I began my academic journey with a Bachelor’s degree in Mathematics, completed in 2018, focusing on algebra, calculus, and probability. My thesis explored the Implicit Function Theorem. In 2022, I went on to earn a Master’s degree in Mathematics, with a thesis titled La teoria di Payley Littlewood e alcune sue applicazioni in analisi, focusing on Harmonic Analysis. Together with my thesis supervisor, we co-authored the article A Note on the Fractional Hardy Inequality, which presents a minor enhancement of Hardy’s inequality and was published in the Bollettino Unione Matematica Italiana.\nIn October 2024, I completed a second Master’s degree in Mathematical and Physical Methods (MPM), further developing my skills in mathematical modeling and broadening my understanding of applied mathematics.\n\n\n\nAs part of the MPM program, I completed a curricular internship at Leonardo Divisione Velivoli, Corso Francia, 426, 10146 Torino. There, I worked on computer vision and 3D deep learning projects, gaining practical experience with cutting-edge technologies and applying my mathematical expertise to solve real-world challenges.\n\n\n\nI am actively seeking a junior position or internship as a data analyst or machine learning practitioner, with a particular interest in applying mathematical and data-driven methods to real-world problems.\n\n\n\n\nArticle: “A Note on the Fractional Hardy Inequality” published in Bollettino Unione Matematica Italiana (2023): Read the article"
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "",
+    "section": "",
+    "text": "I began my academic journey with a Bachelor’s degree in Mathematics, completed in 2018, focusing on algebra, calculus, and probability. My thesis explored the Implicit Function Theorem. In 2022, I went on to earn a Master’s degree in Mathematics, with a thesis titled La teoria di Payley Littlewood e alcune sue applicazioni in analisi, focusing on Harmonic Analysis. Together with my thesis supervisor, we co-authored the article A Note on the Fractional Hardy Inequality, which presents a minor enhancement of Hardy’s inequality and was published in the Bollettino Unione Matematica Italiana.\nIn October 2024, I completed a second Master’s degree in Mathematical and Physical Methods (MPM), further developing my skills in mathematical modeling and broadening my understanding of applied mathematics.\n\n\n\nAs part of the MPM program, I completed a curricular internship at Leonardo Divisione Velivoli, Corso Francia, 426, 10146 Torino. There, I worked on computer vision and 3D deep learning projects, gaining practical experience with cutting-edge technologies and applying my mathematical expertise to solve real-world challenges.\n\n\n\nI am actively seeking a junior position or internship as a data analyst or machine learning practitioner, with a particular interest in applying mathematical and data-driven methods to real-world problems.\n\n\n\n\nArticle: “A Note on the Fractional Hardy Inequality” published in Bollettino Unione Matematica Italiana (2023): Read the article"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "",
+    "section": "Contact",
+    "text": "Contact\nYou can reach me via email or connect with me on LinkedIn."
+  },
+  {
+    "objectID": "about.html#download-cv",
+    "href": "about.html#download-cv",
+    "title": "",
+    "section": "Download CV",
+    "text": "Download CV\nMy CV is available for download here."
+  }
+]
