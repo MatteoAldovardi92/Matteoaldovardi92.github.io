@@ -17,7 +17,7 @@ website:
         href: about.qmd
     right: # Right side (social links, etc.)
       - icon: github
-        href: https://github.com/MatteoAldovardi
+        href: https://github.com/MatteoAldovardi92
       - icon: linkedin
         href: https://www.linkedin.com/in/matteo-aldovardi-63520b257/
       - icon: youtube
