@@ -158,3 +158,63 @@ pre.sourceCode {
 .btn:hover {
   transform: translateY(-1px);
 }
+
+/* Enhanced Header & Banner Depth */
+.banner-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16), 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.25rem;
+  border: 1px solid rgba(125, 125, 125, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-frame img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.header-card {
+  background: rgba(125, 125, 125, 0.04);
+  border: 1px solid rgba(125, 125, 125, 0.18);
+  border-radius: 16px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.header-card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-card .header-sub {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+/* Post preview refinement */
+.quarto-post {
+  border-radius: 14px !important;
+  border: 1px solid rgba(125, 125, 125, 0.18) !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+  background: rgba(125, 125, 125, 0.03);
+}
+
+.quarto-post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09) !important;
+}
+
+.quarto-post .thumbnail img {
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}

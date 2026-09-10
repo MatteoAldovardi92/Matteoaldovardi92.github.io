@@ -84,18 +84,18 @@
     "text": "The code used in this post is adapted from Nicholas Renotte’s tutorial, “Reinforcement Learning in 3 Hours | Full Course using Python”, available on YouTube. The video provides an excellent walkthrough of training and evaluating reinforcement learning agents using stable-baselines3."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Site",
-    "section": "",
-    "text": "Image generated using DALL·E 3"
+    "objectID": "index.html#purpose-of-this-site",
+    "href": "index.html#purpose-of-this-site",
+    "title": "Matteo Aldovardi",
+    "section": "Purpose of This Site",
+    "text": "Purpose of This Site\nHello! I’m Matteo Aldovardi, a mathematics graduate (University of Pisa) with a 1-year Master’s in Mathematical and Physical Methods for Engineering from the University of Turin (UniTO), currently enrolled in the Data Engineering program at Politecnico di Torino.\nThis site serves as my personal blog and portfolio, where I document my exploration of data engineering, machine learning, AI, and mathematics, sharing insights, implementations, and projects along the way. Check out my Portfolio for applied industry projects (such as 3D computer vision at Leonardo Velivoli) and academic publications, or explore my Blog for technical walkthroughs."
   },
   {
-    "objectID": "index.html#recent-posts",
-    "href": "index.html#recent-posts",
-    "title": "Welcome to My Site",
-    "section": "Recent Posts",
-    "text": "Recent Posts\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3"
+    "objectID": "index.html#recent-articles",
+    "href": "index.html#recent-articles",
+    "title": "Matteo Aldovardi",
+    "section": "Recent Articles",
+    "text": "Recent Articles\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\n\n\nSep 18, 2024\n\n4 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/index.html",
@@ -109,21 +109,21 @@
     "href": "about.html",
     "title": "Matteo Aldovardi",
     "section": "",
-    "text": "I am a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino, passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and data engineering where I can apply mathematical rigor and scalable engineering to complex real-world problems."
+    "text": "I am a mathematics graduate currently enrolled in the Data Engineering program at Politecnico di Torino. My background bridges theoretical mathematical rigor with applied computational engineering: after completing my Bachelor’s and Master’s degrees in Mathematics at the University of Pisa, I completed a 1-year Master’s in Mathematical and Physical Methods for Engineering (MPM) at the University of Turin (UniTO), specializing in numerical methods and 3D computer vision during an internship at Leonardo Velivoli.\nI am actively seeking opportunities in data engineering, machine learning, and data science where I can apply mathematical problem-solving and scalable software engineering to real-world data systems."
   },
   {
     "objectID": "about.html#biography",
     "href": "about.html#biography",
     "title": "Matteo Aldovardi",
     "section": "",
-    "text": "I am a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino, passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and data engineering where I can apply mathematical rigor and scalable engineering to complex real-world problems."
+    "text": "I am a mathematics graduate currently enrolled in the Data Engineering program at Politecnico di Torino. My background bridges theoretical mathematical rigor with applied computational engineering: after completing my Bachelor’s and Master’s degrees in Mathematics at the University of Pisa, I completed a 1-year Master’s in Mathematical and Physical Methods for Engineering (MPM) at the University of Turin (UniTO), specializing in numerical methods and 3D computer vision during an internship at Leonardo Velivoli.\nI am actively seeking opportunities in data engineering, machine learning, and data science where I can apply mathematical problem-solving and scalable software engineering to real-world data systems."
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "Matteo Aldovardi",
     "section": "Education",
-    "text": "Education\n\nM.Sc. in Data Science and Engineering\nPolitecnico di Torino | Sept 2025 – Present\nFocus: Big data architectures, distributed computing, statistical learning, and scalable machine learning pipelines.\nM.Sc. in Mathematical and Physical Methods for Engineering (MPM)\nUniversity of Turin | Oct 2024\nFocus: Mathematical modeling, numerical methods, computer vision, and applied machine learning.\nM.Sc. in Mathematics\nUniversity of Pisa | 2022\nThesis: La teoria di Littlewood-Paley e alcune sue applicazioni in analisi\nFocus: Harmonic Analysis, PDE theory, and Functional Analysis.\nB.Sc. in Mathematics\nUniversity of Pisa | 2018\nFocus: Algebra, Calculus, Probability, and Analysis."
+    "text": "Education\n\nData Engineering (M.Sc. Program)\nPolitecnico di Torino | Currently Enrolled (from Sept 2025)\nFocus: Big data architectures, distributed computing, database systems, and scalable data pipelines.\n1-Year Master in Mathematical and Physical Methods for Engineering (MPM)\nUniversity of Turin (UniTO) | Completed Oct 2024\nFocus: Mathematical modeling, numerical methods, computer vision, and applied machine learning.\nM.Sc. in Mathematics\nUniversity of Pisa | Completed 2022\nThesis: La teoria di Littlewood-Paley e alcune sue applicazioni in analisi\nFocus: Harmonic Analysis, PDE theory, and Functional Analysis.\nB.Sc. in Mathematics\nUniversity of Pisa | Completed 2018\nFocus: Algebra, Calculus, Probability, and Mathematical Analysis."
   },
   {
     "objectID": "about.html#professional-experience",

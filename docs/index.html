@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Matteo Aldovardi">
-<meta name="dcterms.date" content="2024-09-11">
-<meta name="description" content="This is a Quarto Website">
 
-<title>Welcome to My Site – Matteo Aldovardi</title>
+<title>Matteo Aldovardi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -80,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-9b6151133c413c50fd8964329a39fe23.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b50b747b946c3468a35a6443021b8cd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-8fafd6583b520f0bc8877048fb7be126.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-b50b747b946c3468a35a6443021b8cd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6be389c1ba40d25a691f17446417db2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-16cceb201513e465c6099c1e90842edf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6be389c1ba40d25a691f17446417db2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,11 +109,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-featured-post .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-featured-post'] = new List('listing-featured-post', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -340,41 +411,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Welcome to My Site</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-</div>
-
-<div>
-  <div class="description">
-    This is a <a href="https://quarto.org/">Quarto</a> Website
-  </div>
+<div class="quarto-title-block"><div><h1 class="title">Matteo Aldovardi</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Mathematics • Machine Learning • Data Science</p>
 </div>
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Matteo Aldovardi </p>
-          </div>
-  </div>
+<div class="quarto-title-meta column-page">
+
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 11, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -384,31 +439,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="headbar" class="quarto-layout-panel" data-layout-ncol="1">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/banner.jpeg" style="width:100.0%" height="300" class="figure-img"></p>
-<figcaption>Image generated using DALL·E 3</figcaption>
-</figure>
+<div class="banner-frame">
+<p><img src="images/banner.jpeg" class="img-fluid"></p>
+</div>
+<section id="purpose-of-this-site" class="level2 header-card">
+<h2 class="anchored" data-anchor-id="purpose-of-this-site">Purpose of This Site</h2>
+<p>Hello! I’m <strong>Matteo Aldovardi</strong>, a mathematics graduate (University of Pisa) with a 1-year Master’s in Mathematical and Physical Methods for Engineering from the University of Turin (UniTO), currently enrolled in the Data Engineering program at Politecnico di Torino.</p>
+<p>This site serves as my personal blog and portfolio, where I document my exploration of data engineering, machine learning, AI, and mathematics, sharing insights, implementations, and projects along the way. Check out my <a href="./portfolio.html"><strong>Portfolio</strong></a> for applied industry projects (such as 3D computer vision at Leonardo Velivoli) and academic publications, or explore my <a href="./blog/index.html"><strong>Blog</strong></a> for technical walkthroughs.</p>
+</section>
+<section id="recent-articles" class="level2">
+<h2 class="anchored" data-anchor-id="recent-articles">Recent Articles</h2>
+<div id="listing-featured-post" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="UmVpbmZvcmNlbWVudCUyMExlYXJuaW5nJTJDU3RhYmxlJTIwQmFzZWxpbmVzMyUyQ0NhcnRQb2xlJTJDUFBP" data-listing-date-sort="1726610400000" data-listing-file-modified-sort="1789043130454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="764">
+<div class="thumbnail"><a href="./blog/post_18-09-24.html" class="no-external">
+
+<img loading="lazy" src="./images/blog/post_18-09-24/cartopole.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./blog/post_18-09-24.html" class="no-external">Training and Visualizing a PPO Agent on CartPole using Stable Baselines3</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmVpbmZvcmNlbWVudCUyMExlYXJuaW5n'); return false;">Reinforcement Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhYmxlJTIwQmFzZWxpbmVzMw=='); return false;">Stable Baselines3</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q2FydFBvbGU='); return false;">CartPole</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UFBP'); return false;">PPO</div>
+
+</div>
+<div class="delink listing-description"><a href="./blog/post_18-09-24.html" class="no-external">
+<p>Training a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./blog/post_18-09-24.html" class="no-external">
+<div class="listing-date">
+Sep 18, 2024
+</div>
+<div class="listing-reading-time">4 min</div>
+</a>
 </div>
 </div>
 </div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
-<section id="purpose-of-this-site" class="level1">
-<h1>Purpose of This Site</h1>
-<p>Hello! I’m Matteo Aldovardi, a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino (holding previous degrees from the University of Pisa and University of Turin). This site serves as my personal blog and portfolio, where I document my exploration of data science, AI, and mathematics, sharing insights, projects, and my learning journey along the way. Check out my <a href="./portfolio.html">portfolio</a> for projects and examples of my work, or visit my <a href="./blog/index.html">blog</a> for technical notes and write-ups.</p>
-<section id="recent-posts" class="level2">
-<h2 class="anchored" data-anchor-id="recent-posts">Recent Posts</h2>
-<ul>
-<li><a href="./blog/post_18-09-24.html">Training and Visualizing a PPO Agent on CartPole using Stable Baselines3</a></li>
-</ul>
+
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -876,24 +960,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Welcome to My Site"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "This is a [Quarto](https://quarto.org/) Website"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Matteo Aldovardi"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2024-09-11"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> false</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>::: {#headbar layout-ncol=1}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="al">![Image generated using DALL·E 3](images/banner.jpeg)</span>{width=100% height=300px}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Purpose of This Site</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Hello! I'm Matteo Aldovardi, a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino (holding previous degrees from the University of Pisa and University of Turin). This site serves as my personal blog and portfolio, where I document my exploration of data science, AI, and mathematics, sharing insights, projects, and my learning journey along the way. Check out my <span class="co">[</span><span class="ot">portfolio</span><span class="co">](portfolio.qmd)</span> for projects and examples of my work, or visit my <span class="co">[</span><span class="ot">blog</span><span class="co">](blog/index.qmd)</span> for technical notes and write-ups.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recent Posts</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Training and Visualizing a PPO Agent on CartPole using Stable Baselines3</span><span class="co">](blog/post_18-09-24.qmd)</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Matteo Aldovardi"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Mathematics &amp;bull; Machine Learning &amp;bull; Data Science"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> false</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - id: featured-post</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    contents:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">      - "blog/post_18-09-24.qmd"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    type: default</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    fields: [image, date, title, description, categories, reading-time]</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>::: {.banner-frame}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/banner.jpeg)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>::: {.header-card}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose of This Site</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Hello! I'm **Matteo Aldovardi**, a mathematics graduate (University of Pisa) with a 1-year Master's in Mathematical and Physical Methods for Engineering from the University of Turin (UniTO), currently enrolled in the Data Engineering program at Politecnico di Torino. </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>This site serves as my personal blog and portfolio, where I document my exploration of data engineering, machine learning, AI, and mathematics, sharing insights, implementations, and projects along the way. Check out my <span class="co">[</span><span class="ot">**Portfolio**</span><span class="co">](portfolio.qmd)</span> for applied industry projects (such as 3D computer vision at Leonardo Velivoli) and academic publications, or explore my <span class="co">[</span><span class="ot">**Blog**</span><span class="co">](blog/index.qmd)</span> for technical walkthroughs.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recent Articles</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>::: {#featured-post}</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

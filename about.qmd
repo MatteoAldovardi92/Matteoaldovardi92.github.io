@@ -24,30 +24,30 @@ about:
 
 ## Biography
 
-I am a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino, passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.
+I am a mathematics graduate currently enrolled in the Data Engineering program at Politecnico di Torino. My background bridges theoretical mathematical rigor with applied computational engineering: after completing my Bachelor's and Master's degrees in Mathematics at the University of Pisa, I completed a 1-year Master's in Mathematical and Physical Methods for Engineering (MPM) at the University of Turin (UniTO), specializing in numerical methods and 3D computer vision during an internship at Leonardo Velivoli.
 
-I am actively seeking opportunities in machine learning, data science, and data engineering where I can apply mathematical rigor and scalable engineering to complex real-world problems.
+I am actively seeking opportunities in data engineering, machine learning, and data science where I can apply mathematical problem-solving and scalable software engineering to real-world data systems.
 
 ---
 
 ## Education
 
-- **M.Sc. in Data Science and Engineering**  
-  *Politecnico di Torino* | Sept 2025 – Present  
-  *Focus:* Big data architectures, distributed computing, statistical learning, and scalable machine learning pipelines.
+- **Data Engineering (M.Sc. Program)**  
+  *Politecnico di Torino* | Currently Enrolled (from Sept 2025)  
+  *Focus:* Big data architectures, distributed computing, database systems, and scalable data pipelines.
 
-- **M.Sc. in Mathematical and Physical Methods for Engineering (MPM)**  
-  *University of Turin* | Oct 2024  
+- **1-Year Master in Mathematical and Physical Methods for Engineering (MPM)**  
+  *University of Turin (UniTO)* | Completed Oct 2024  
   *Focus:* Mathematical modeling, numerical methods, computer vision, and applied machine learning.
 
 - **M.Sc. in Mathematics**  
-  *University of Pisa* | 2022  
+  *University of Pisa* | Completed 2022  
   *Thesis:* [La teoria di Littlewood-Paley e alcune sue applicazioni in analisi](https://etd.adm.unipi.it/theses/available/etd-10012022-110009/)  
   *Focus:* Harmonic Analysis, PDE theory, and Functional Analysis.
 
 - **B.Sc. in Mathematics**  
-  *University of Pisa* | 2018  
-  *Focus:* Algebra, Calculus, Probability, and Analysis.
+  *University of Pisa* | Completed 2018  
+  *Focus:* Algebra, Calculus, Probability, and Mathematical Analysis.
 
 ---
 
