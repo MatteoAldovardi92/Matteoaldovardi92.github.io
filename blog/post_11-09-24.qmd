@@ -1,9 +1,10 @@
 ---
 title: "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset"
+description: "A ground-up implementation of the K-Nearest Neighbors algorithm in Python, evaluated on the classic Iris dataset with visual decision boundaries."
 author: "Matteo Aldovardi"
 date: "2024-09-11"
-categories: [machine learning, KNN, Python]
-format: html
+categories: ["Machine Learning", "KNN", "Python"]
+image: "../images/blog/post_11-09-24/results.jpg"
 ---
 
 ## Overview

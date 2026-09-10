@@ -1,23 +1,40 @@
 ---
-title: "Welcome to My Site"
-description: "This is a [Quarto](https://quarto.org/) Website"
-author: "Matteo Aldovardi"
-date: 09/11/2024
-format:
-  html:
-    theme: slate
+title: "Matteo Aldovardi"
+subtitle: "Mathematics &bull; Machine Learning &bull; Computer Vision"
+page-layout: full
+toc: false
+listing:
+  - id: recent-posts
+    contents:
+      - "blog/*.qmd"
+      - "!blog/index.qmd"
+    sort: "date desc"
+    type: grid
+    max-items: 3
+    grid-columns: 3
+    fields: [image, date, title, description, categories, reading-time]
 ---
 
-::: {#headbar layout-ncol=1}
-![Image generated using DALL·E 3](images/banner.jpeg){width=100% height=300px}
+::: {#hero-banner}
+![](images/banner.jpeg){fig-align="center" style="border-radius: 10px; max-height: 280px; width: 100%; object-fit: cover; margin-bottom: 2rem;"}
 :::
 
-# Purpose of This Site
+## Welcome
 
-Hello! I'm Matteo Aldovardi, a dedicated machine learning enthusiast and mathematician. This site serves as my personal blog and portfolio, where I document my exploration of data science, AI, and mathematics, sharing insights, projects, and my learning journey along the way. I also tutor students from high school to university in mathematics, so I've added a Tutoring section to share resources and interactive lessons. Check out my [portfolio](portfolio.qmd) for projects and examples of my work, or visit my [blog](blog/index.qmd) for insights and updates on my latest explorations.
+Hello and welcome! I am **Matteo Aldovardi**, a mathematician and machine learning practitioner with a background in harmonic analysis, operator theory, and 3D computer vision.
 
+This site serves as an open portfolio and knowledge hub where I share:
+- [**Portfolio**](portfolio.qmd): Industry projects (such as 3D aerial scene reconstruction at Leonardo Velivoli), pure math research publications, and machine learning implementations.
+- [**Blog**](blog/index.qmd): In-depth tutorials and code implementations in machine learning, mathematical modeling, and data science.
+- [**About Me**](about.qmd): Academic journey, technical background, and downloadable CV.
 
-## Recent Posts
-  - [Training and Visualizing a PPO Agent on CartPole using Stable Baselines3](blog/post_18-09-24.qmd)
+---
 
-  - [Implementing K-Nearest Neighbor with Python](blog/post_11-09-24.qmd)
+## Recent Articles
+
+::: {#recent-posts}
+:::
+
+<div style="text-align: right; margin-top: 1rem;">
+  <a href="blog/index.qmd" class="btn btn-outline-primary">Explore All Articles &rarr;</a>
+</div>

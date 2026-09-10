@@ -3,28 +3,47 @@ project:
   output-dir: docs
 
 website:
+  title: "Matteo Aldovardi"
+  site-url: "https://matteoaldovardi92.github.io"
+  search: true
   navbar:
-    left: # Left side of the navigation bar
+    title: "Matteo Aldovardi"
+    left:
       - text: "Home"
         href: index.qmd
+      - text: "About"
+        href: about.qmd
       - text: "Portfolio"
         href: portfolio.qmd
       - text: "Blog"
         href: blog/index.qmd
-      - text: "Tutoring"
-        href: tutoring/index.qmd
-      - text: "About Me"
-        href: about.qmd
-    right: # Right side (social links, etc.)
+    right:
+      - text: "CV"
+        icon: file-earmark-person
+        href: assets/cv/Matteo_Aldovardi_CV.pdf
       - icon: github
         href: https://github.com/MatteoAldovardi92
+        aria-label: GitHub
       - icon: linkedin
         href: https://www.linkedin.com/in/matteo-aldovardi-63520b257/
+        aria-label: LinkedIn
       - icon: youtube
         href: https://www.youtube.com/channel/UCn6gfvpsW1kbTK0E9AP6NjA
+        aria-label: YouTube
+  page-footer:
+    left: "Copyright © 2026 Matteo Aldovardi"
+    right: "Built with [Quarto](https://quarto.org/)"
 
 format:
   html:
-    theme: cosmo # Bootstrap theme (e.g., cosmo, litera, flatly)
-    toc: false # Enable table of contents
-    toc-depth: 2 # Specify depth of table of contents (optional)
+    theme:
+      light: cosmo
+      dark: slate
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    code-fold: show
+    code-tools: true
+    code-copy: true
+    code-overflow: wrap
+    html-math-method: katex

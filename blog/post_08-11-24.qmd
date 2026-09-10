@@ -1,8 +1,10 @@
 ---
 title: "Understanding PCA with the Olivetti Faces Dataset"
+description: "Exploring Principal Component Analysis (PCA) on the Olivetti Faces dataset: comparing a custom from-scratch implementation against scikit-learn to compress facial images."
 author: "Matteo Aldovardi"
 date: "2024-11-08"
-categories: ["machine learning", "PCA", "data analysis"]
+categories: ["Machine Learning", "PCA", "Data Analysis"]
+image: "../images/blog/post_8-11-24/FaceGrid1.jpg"
 ---
 
 # PCA Implementation and Comparison with sklearn

@@ -2,9 +2,30 @@
   {
     "objectID": "portfolio.html",
     "href": "portfolio.html",
-    "title": "My Portfolio",
+    "title": "Portfolio & Projects",
     "section": "",
-    "text": "Here are some of the key projects and publications I’ve worked on:\n\nInternship with Leonardo in 3D Deep Learning:\n\nAs part of the Master’s in Mathematical and Physical Models for Engineering, I completed a curricular internship at Leonardo Divisione Velivoli in Turin. During this time, I focused on reconstructing 3D scenes from 2D images, combining computer vision techniques with 3D deep learning frameworks. This hands-on experience allowed me to explore how machine learning can address the limitations of traditional photogrammetry, applying my mathematical expertise to develop innovative solutions in aerospace applications.\n\nPublication: A Note on Hardy’s Inequality for Pseudo-Differential Operators\nThis publication explores applications of Hardy’s inequality within the realm of pseudo-differential operators, contributing insights into mathematical analysis and operator theory."
+    "text": "A curated selection of my academic research, industrial engineering projects, and machine learning implementations."
+  },
+  {
+    "objectID": "portfolio.html#industrial-applied-research",
+    "href": "portfolio.html#industrial-applied-research",
+    "title": "Portfolio & Projects",
+    "section": "Industrial & Applied Research",
+    "text": "Industrial & Applied Research\n\n\n\n\n\n\n3D Scene Reconstruction with Deep Learning (Leonardo Divisione Velivoli)\n\n\n\nFocus: Computer Vision • 3D Deep Learning • Aerospace Applications\nTools: PyTorch, OpenCV, Point Clouds, Photogrammetry\nDuring my curricular internship at Leonardo Divisione Velivoli in Turin as part of the MPM Master’s program: - Investigated neural approaches to 3D scene reconstruction from 2D aerial imagery. - Explored hybrid solutions combining traditional geometric computer vision with modern deep learning representations (e.g., neural implicit fields and deep stereo) to overcome limitations in classical photogrammetry under challenging illumination and sparse keypoints."
+  },
+  {
+    "objectID": "portfolio.html#machine-learning-ai-implementations",
+    "href": "portfolio.html#machine-learning-ai-implementations",
+    "title": "Portfolio & Projects",
+    "section": "Machine Learning & AI Implementations",
+    "text": "Machine Learning & AI Implementations\n\n\n\n\n\n\nReinforcement Learning: PPO Agent on CartPole\n\n\n\nFocus: Policy Gradient Methods • Continuous/Discrete Control • Agent Visualization\nTools: Gymnasium, Stable-Baselines3, PyTorch\n- Implemented and trained a Proximal Policy Optimization (PPO) agent to balance the CartPole environment for 200 consecutive steps. - Produced video recordings contrasting untrained random policies with the converged neural policy.\nRead the Technical Walkthrough →\n\n\n\n\n\n\n\n\nDimensionality Reduction: PCA & Eigenfaces from Scratch\n\n\n\nFocus: Spectral Decomposition • Image Compression • Subspace Learning\nTools: Python, NumPy, scikit-learn, Matplotlib\n- Derived and implemented Principal Component Analysis (PCA) directly from eigendecomposition of the covariance matrix. - Evaluated 90% variance subspace projection on the Olivetti Faces dataset, validating results against sklearn.decomposition.PCA.\nRead the Technical Walkthrough →\n\n\n\n\n\n\n\n\nNon-Parametric Classification: KNN Algorithm from Scratch\n\n\n\nFocus: Metric Spaces • Majority Voting • Decision Boundary Visualization\nTools: Python, NumPy\n- Built a vector-accelerated k-Nearest Neighbors classifier from fundamental Euclidean distance metrics without external ML libraries. - Demonstrated classification boundaries and confidence distributions on the Iris dataset.\nRead the Technical Walkthrough →"
+  },
+  {
+    "objectID": "portfolio.html#mathematics-academic-publications",
+    "href": "portfolio.html#mathematics-academic-publications",
+    "title": "Portfolio & Projects",
+    "section": "Mathematics & Academic Publications",
+    "text": "Mathematics & Academic Publications\n\n\n\n\n\n\nPublication: Hardy’s Inequality for Pseudo-Differential Operators\n\n\n\nBollettino dell’Unione Matematica Italiana (Springer, 2023)\nAuthors: M. Aldovardi, et al. • DOI: 10.1007/s40574-023-00359-7\nInvestigates extensions of fractional Hardy inequalities within the framework of pseudo-differential operators, deriving Sobolev space bounds and regularity properties relevant to mathematical physics and harmonic analysis.\n\n\n\n\n\n\n\n\nMaster’s Thesis: Littlewood-Paley Theory in Harmonic Analysis\n\n\n\nUniversity of Pisa, Department of Mathematics (2022)\nAdvisor: Prof. Marco Ghimenti • Read at ETD Pisa\nExplores dyadic decompositions, multiplier theorems, and the foundational role of Littlewood-Paley square functions in modern partial differential equations and function space theory (L^p, Besov, Triebel-Lizorkin)."
   },
   {
     "objectID": "blog/post_18-09-24.html",
@@ -102,14 +123,14 @@
     "href": "blog/post_11-09-24.html#plot-of-a-classification-result",
     "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
     "section": "Plot of a classification result",
-    "text": "Plot of a classification result\n\n\n\nFigure 1: Classification of a test point"
+    "text": "Plot of a classification result\n\n\n\n\n\n\nFigure 1: Classification of a test point"
   },
   {
     "objectID": "blog/post_11-09-24.html#the-two-species-of-iris-classified",
     "href": "blog/post_11-09-24.html#the-two-species-of-iris-classified",
     "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
     "section": "The two species of iris classified",
-    "text": "The two species of iris classified\n\n\n\n\n\n\nFigure 2: Iris Versicolor\n\n\n\n\n\n\n\nFigure 3: Iris Setosa\n\n\n\n\n\n\nPhoto of Iris Versicolor (Blue flag flower) by Danielle Langlois, taken in July 2005 at Forillon National Park, Quebec, Canada. License: CC BY-SA 3.0. File.\n\n\nPhoto of Iris Setosa by Radomil. License: GNU Free Documentation License, Version 1.2 or later."
+    "text": "The two species of iris classified\n\n\n\n\n\n\n\n\n\nFigure 2: Iris Versicolor\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Iris Setosa\n\n\n\n\n\n\n\nPhoto of Iris Versicolor (Blue flag flower) by Danielle Langlois, taken in July 2005 at Forillon National Park, Quebec, Canada. License: CC BY-SA 3.0. File.\n\n\nPhoto of Iris Setosa by Radomil. License: GNU Free Documentation License, Version 1.2 or later."
   },
   {
     "objectID": "blog/post_11-09-24.html#credits",
@@ -119,67 +140,18 @@
     "text": "Credits\n\nK-Nearest Neighbors Algorithm:\nThis implementation was adapted from the tutorial provided by Jason Brownlee, “Tutorial to Implement k-Nearest Neighbors in Python from Scratch.”\nSource: Machine Learning Mastery\nIris Dataset:\nThe dataset used in this post is the famous Iris dataset. It is available through the Scikit-learn library.\nVisualizations:\nVisualizations were created using the Matplotlib library."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Site",
-    "section": "",
-    "text": "Image generated using DALL·E 3"
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Matteo Aldovardi",
+    "section": "Welcome",
+    "text": "Welcome\nHello and welcome! I am Matteo Aldovardi, a mathematician and machine learning practitioner with a background in harmonic analysis, operator theory, and 3D computer vision.\nThis site serves as an open portfolio and knowledge hub where I share: - Portfolio: Industry projects (such as 3D aerial scene reconstruction at Leonardo Velivoli), pure math research publications, and machine learning implementations. - Blog: In-depth tutorials and code implementations in machine learning, mathematical modeling, and data science. - About Me: Academic journey, technical background, and downloadable CV."
   },
   {
-    "objectID": "index.html#recent-posts",
-    "href": "index.html#recent-posts",
-    "title": "Welcome to My Site",
-    "section": "Recent Posts",
-    "text": "Recent Posts\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\nImplementing K-Nearest Neighbor with Python"
-  },
-  {
-    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html",
-    "href": "tutoring/change_of_variables_in_indefinite_integrals.html",
-    "title": "",
-    "section": "",
-    "text": "topic: “Highschool Integrals”\nauthor: “Matteo Aldovardi”"
-  },
-  {
-    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#introduction",
-    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#introduction",
-    "title": "",
-    "section": "Introduction",
-    "text": "Introduction\nIn this article, we’ll explore the basic concept of integrals, focusing on the change of variable formula. We’ll look at how substitution is used to simplify integrals, and discuss the difference between formal and rigorous steps in mathematical reasoning. Through a practical example, you’ll see how these techniques are applied to solve integrals efficiently. This content is intended for high school students to help build a solid foundation for understanding calculus concepts."
-  },
-  {
-    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#indefinite-integrals",
-    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#indefinite-integrals",
-    "title": "",
-    "section": "1. Indefinite Integrals",
-    "text": "1. Indefinite Integrals\nAn indefinite integral represents a family of functions that share the same derivative. It is denoted as:\n\\[\n\\int f(x)\\,dx\n\\]\nFor example:\n\\[\n\\int \\frac{1}{1+x^2} \\, dx = \\arctan(x) + C.\n\\]\n\nSubstitution:\nThe substitution rule states:\n\\[\n\\int f(g(x)) \\cdot g'(x) \\, dx = \\int f(u) \\, du.\n\\]\nThis formula becomes easier to remember if you write \\(u(x)\\) in place of \\(g(x)\\), using the same letter to denote both the function and the variable. Formally, we can write:\n\\[\n\\int f(u(x)) \\cdot \\frac{d u}{d x} \\, dx = \\int f(u) \\, du.\n\\]\nThe \\(dx\\) terms seem to “cancel,” though this is a formal passage—not rigorous, but effective. Similarly, manipulations in specific examples often rely on such formal simplifications.\nWhat does “formally” mean when we oppose it to “rigorously”?\nIn mathematics, formal steps refer to symbolic manipulations suggested by the notation, which may or may not rely on rigorous definitions. For example, treating \\(dx\\) as a fraction or canceling terms might not initially be fully justified, but these steps often align with rigorous reasoning and lead to correct results. Formal does not imply a lack of rigor—it highlights a focus on notation and rules rather than detailed justification.\n\n\nPractical Example:\nEvaluate the integral:\n\\[\n\\int \\frac{6 \\cdot x}{1 + 9 \\cdot x^4} \\, dx.\n\\]\nUsing the substitution \\(u = 3 \\cdot x^2\\), we compute \\(\\frac{du}{dx} = 6 \\cdot x\\). Formally, multiplying through by \\(dx\\) and dividing by \\(6 \\cdot x\\) gives:\n\\[\ndx = \\frac{du}{6 \\cdot x}.\n\\]\nSubstituting formally into the integral, we proceed as follows:\n\\[\n\\int \\frac{6x}{1 + (3 \\cdot x^2)^2} \\, dx = \\int \\frac{6 \\cdot x}{1 + u^2} \\, dx\n= \\int \\frac{6 \\cdot x}{1 + u^2} \\cdot \\frac{1}{6 \\cdot x} \\, du = \\int \\frac{1}{1 + u^2} \\, du.\n\\]\nFinally:\n\\[\n\\int \\frac{du}{1 + u^2} = \\arctan(u) + C = \\arctan(3 \\cdot x^2) + C.\n\\]"
-  },
-  {
-    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#warnings",
-    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#warnings",
-    "title": "",
-    "section": "Warnings:",
-    "text": "Warnings:\nThe steps above involve formal passages because:\n- The nature of \\(dx\\) and \\(du\\) is not rigorously defined.\n- Division by terms like \\(6 \\cdot x\\) implicitly assumes \\(\\frac{du}{dx} \\neq 0\\).\nThese manipulations simplify computations but should be justified rigorously in more advanced contexts."
-  },
-  {
-    "objectID": "tutoring/change_of_variables_in_indefinite_integrals.html#a-sketch-of-the-proof-of-the-change-of-variable-formula",
-    "href": "tutoring/change_of_variables_in_indefinite_integrals.html#a-sketch-of-the-proof-of-the-change-of-variable-formula",
-    "title": "",
-    "section": "A sketch of the proof of the Change of Variable Formula:",
-    "text": "A sketch of the proof of the Change of Variable Formula:\nLet \\(F(u)\\) be a primitive of \\(f(u)\\), meaning \\(F'(u) = f(u)\\). Then, by the definition of an indefinite integral, we can write \\[\nF(u) = \\int f(u) \\, du.\n\\]\nBut since \\(u = u(x)\\), it is also true that \\(F(u) = F(u(x))\\). By differentiating with respect to \\(x\\), we obtain\n\\[\n\\frac{d}{dx} F(u(x)) = \\frac{d F}{d u} \\cdot \\frac{d u}{dx} = f(u(x)) \\cdot \\frac{du}{dx}.\n\\] Thus, \\(F(u(x))\\) is a primitive of the function\n\\[\nf(u(x)) \\cdot \\frac{d u}{dx},\n\\] or equivalently,\n\\[\nF(u(x)) = \\int f(u(x)) \\cdot \\frac{d u}{dx} \\, dx.\n\\] Finally, we conclude using the following chain of equalities:\n\\[\n\\int f(u) \\, du = F(u) = F(u(x)) = \\int f(u(x)) \\cdot \\frac{d u}{dx} \\, dx.\n\\]\n\nFootnote:\nI am aware that indefinite integrals can be misleading, as they might lead students to believe that the only primitives of\n\\[\n\\frac{1}{x}\n\\]\nare functions of the form\n\\[\n\\ln(\\vert x \\vert ) + C,\n\\]\nwhere \\(C\\) is a real number.\nIndeed, it is common to write:\n\\[\n\\int \\frac{1}{x} \\, dx = \\ln (\\vert x \\vert ) + C.\n\\]\nAt an introductory high school level, my goal is to keep things as straightforward as possible. This topic might be explored in another post about derivatives defined on intervals."
-  },
-  {
-    "objectID": "tutoring/index.html",
-    "href": "tutoring/index.html",
-    "title": "Tutoring",
-    "section": "",
-    "text": "Welcome to the Tutoring section! Here, you’ll find interactive notebooks and resources designed to help students I tutor gain a deeper understanding of various math topics."
-  },
-  {
-    "objectID": "tutoring/index.html#available-topics",
-    "href": "tutoring/index.html#available-topics",
-    "title": "Tutoring",
-    "section": "Available Topics",
-    "text": "Available Topics\n\nChange of Variables Formula for Indefinite Integrals"
+    "objectID": "index.html#recent-articles",
+    "href": "index.html#recent-articles",
+    "title": "Matteo Aldovardi",
+    "section": "Recent Articles",
+    "text": "Recent Articles\n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA with the Olivetti Faces Dataset\n\n1 min\n\n\nMachine Learning\n\nPCA\n\nData Analysis\n\n\n\nExploring Principal Component Analysis (PCA) on the Olivetti Faces dataset: comparing a custom from-scratch implementation against scikit-learn to compress facial images.\n\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n4 min\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nImplementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset\n\n3 min\n\n\nMachine Learning\n\nKNN\n\nPython\n\n\n\nA ground-up implementation of the K-Nearest Neighbors algorithm in Python, evaluated on the classic Iris dataset with visual decision boundaries.\n\n\n\nSep 11, 2024\n\n\n\n\n\n\nNo matching items\n\n\nExplore All Articles →"
   },
   {
     "objectID": "blog/post_08-11-24.html",
@@ -191,36 +163,50 @@
   {
     "objectID": "blog/index.html",
     "href": "blog/index.html",
-    "title": "Posts by Date:",
+    "title": "Blog",
     "section": "",
-    "text": "September 11, 2024: Implementing K-Nearest Neighbor with Python\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA with the Olivetti Faces Dataset\n\n\n\nMachine Learning\n\nPCA\n\nData Analysis\n\n\n\nExploring Principal Component Analysis (PCA) on the Olivetti Faces dataset: comparing a custom from-scratch implementation against scikit-learn to compress facial images.\n\n\n\n\n\nNov 8, 2024\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\n\n\nSep 18, 2024\n\n4 min\n\n\n\n\n\n\n\n\n\n\n\nImplementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset\n\n\n\nMachine Learning\n\nKNN\n\nPython\n\n\n\nA ground-up implementation of the K-Nearest Neighbors algorithm in Python, evaluated on the classic Iris dataset with visual decision boundaries.\n\n\n\n\n\nSep 11, 2024\n\n3 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "",
+    "title": "Matteo Aldovardi",
     "section": "",
-    "text": "I began my academic journey with a Bachelor’s degree in Mathematics, completed in 2018, focusing on algebra, calculus, and probability. My thesis explored the Implicit Function Theorem. In 2022, I went on to earn a Master’s degree in Mathematics, with a thesis titled La teoria di Payley Littlewood e alcune sue applicazioni in analisi, focusing on Harmonic Analysis. Together with my thesis supervisor, we co-authored the article A Note on the Fractional Hardy Inequality, which presents a minor enhancement of Hardy’s inequality and was published in the Bollettino Unione Matematica Italiana.\nIn October 2024, I completed a second Master’s degree in Mathematical and Physical Methods (MPM), further developing my skills in mathematical modeling and broadening my understanding of applied mathematics.\n\n\n\nAs part of the MPM program, I completed a curricular internship at Leonardo Divisione Velivoli, Corso Francia, 426, 10146 Torino. There, I worked on computer vision and 3D deep learning projects, gaining practical experience with cutting-edge technologies and applying my mathematical expertise to solve real-world challenges.\n\n\n\nI am actively seeking a junior position or internship as a data analyst or machine learning practitioner, with a particular interest in applying mathematical and data-driven methods to real-world problems.\n\n\n\n\nArticle: “A Note on the Fractional Hardy Inequality” published in Bollettino Unione Matematica Italiana (2023): Read the article"
+    "text": "I am a mathematician and machine learning practitioner passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and quantitative modeling where I can apply mathematical rigor to complex real-world engineering problems."
   },
   {
-    "objectID": "about.html#about-me",
-    "href": "about.html#about-me",
-    "title": "",
+    "objectID": "about.html#biography",
+    "href": "about.html#biography",
+    "title": "Matteo Aldovardi",
     "section": "",
-    "text": "I began my academic journey with a Bachelor’s degree in Mathematics, completed in 2018, focusing on algebra, calculus, and probability. My thesis explored the Implicit Function Theorem. In 2022, I went on to earn a Master’s degree in Mathematics, with a thesis titled La teoria di Payley Littlewood e alcune sue applicazioni in analisi, focusing on Harmonic Analysis. Together with my thesis supervisor, we co-authored the article A Note on the Fractional Hardy Inequality, which presents a minor enhancement of Hardy’s inequality and was published in the Bollettino Unione Matematica Italiana.\nIn October 2024, I completed a second Master’s degree in Mathematical and Physical Methods (MPM), further developing my skills in mathematical modeling and broadening my understanding of applied mathematics.\n\n\n\nAs part of the MPM program, I completed a curricular internship at Leonardo Divisione Velivoli, Corso Francia, 426, 10146 Torino. There, I worked on computer vision and 3D deep learning projects, gaining practical experience with cutting-edge technologies and applying my mathematical expertise to solve real-world challenges.\n\n\n\nI am actively seeking a junior position or internship as a data analyst or machine learning practitioner, with a particular interest in applying mathematical and data-driven methods to real-world problems.\n\n\n\n\nArticle: “A Note on the Fractional Hardy Inequality” published in Bollettino Unione Matematica Italiana (2023): Read the article"
+    "text": "I am a mathematician and machine learning practitioner passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and quantitative modeling where I can apply mathematical rigor to complex real-world engineering problems."
   },
   {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "",
-    "section": "Contact",
-    "text": "Contact\nYou can reach me via email or connect with me on LinkedIn."
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Matteo Aldovardi",
+    "section": "Education",
+    "text": "Education\n\nM.Sc. in Mathematical and Physical Methods for Engineering (MPM)\nUniversity of Turin | Oct 2024\nFocus: Mathematical modeling, numerical methods, computer vision, and applied machine learning.\nM.Sc. in Mathematics\nUniversity of Pisa | 2022\nThesis: La teoria di Littlewood-Paley e alcune sue applicazioni in analisi\nFocus: Harmonic Analysis, PDE theory, and Functional Analysis.\nB.Sc. in Mathematics\nUniversity of Pisa | 2018\nFocus: Algebra, Calculus, Probability, and Analysis."
   },
   {
-    "objectID": "about.html#download-cv",
-    "href": "about.html#download-cv",
-    "title": "",
-    "section": "Download CV",
-    "text": "Download CV\nMy CV is available for download here."
+    "objectID": "about.html#professional-experience",
+    "href": "about.html#professional-experience",
+    "title": "Matteo Aldovardi",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n3D Deep Learning & Computer Vision Intern\nLeonardo Divisione Velivoli (Turin, Italy)\nInvestigated 3D reconstruction of scenes from 2D aerial imagery using deep learning and computer vision frameworks, overcoming limitations of traditional photogrammetry."
+  },
+  {
+    "objectID": "about.html#publications",
+    "href": "about.html#publications",
+    "title": "Matteo Aldovardi",
+    "section": "Publications",
+    "text": "Publications\n\nA Note on Hardy’s Inequality for Pseudo-Differential Operators\nBollettino dell’Unione Matematica Italiana (2023)\nM. Aldovardi, et al.\nDOI: 10.1007/s40574-023-00359-7"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "Matteo Aldovardi",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nMathematics: Harmonic Analysis, Differential Equations, Linear Algebra, Probability & Statistics, Optimization\nMachine Learning & AI: PyTorch, scikit-learn, Stable-Baselines3, Computer Vision, 3D Reconstruction\nProgramming & Tools: Python, C, SQL, Git, Quarto, LaTeX, Bash"
   }
 ]

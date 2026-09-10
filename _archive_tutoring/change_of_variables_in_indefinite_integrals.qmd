@@ -1,5 +1,9 @@
-topic: "Highschool Integrals"  
-author: "Matteo Aldovardi"  
+---
+title: "Change of Variables Formula for Indefinite Integrals"
+description: "A foundational guide to substitution in indefinite integrals, distinguishing between formal intuition and rigorous mathematical steps."
+author: "Matteo Aldovardi"
+date: "2024-09-01"
+categories: ["Calculus", "Integration", "High School"]
 ---
 
 ## Introduction

@@ -1,9 +1,10 @@
-
 ---
 title: "Training and Visualizing a PPO Agent on CartPole using Stable Baselines3"
+description: "Training a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations."
 author: "Matteo Aldovardi"
 date: "2024-09-18"
 categories: ["Reinforcement Learning", "Stable Baselines3", "CartPole", "PPO"]
+image: "../images/blog/post_18-09-24/cartopole.jpg"
 ---
 
 # Training and Visualizing a PPO Agent on CartPole using Stable Baselines3

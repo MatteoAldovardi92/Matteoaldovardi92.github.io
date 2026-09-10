@@ -1,0 +1,18 @@
+---
+title: "Tutoring & Mathematics Notes"
+description: "Educational materials, step-by-step mathematical notes, and interactive lessons designed for high school and university students."
+listing:
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, description, categories, reading-time]
+  page-size: 10
+page-layout: full
+---
+
+Welcome to the **Tutoring & Mathematics Notes** section! Here, I share structured notes, step-by-step guides, and interactive lessons designed to help students develop strong problem-solving skills and intuition in algebra, calculus, and advanced mathematics.
