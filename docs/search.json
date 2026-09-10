@@ -11,7 +11,7 @@
     "href": "portfolio.html#industrial-applied-computer-vision",
     "title": "Portfolio & Selected Projects",
     "section": "Industrial & Applied Computer Vision",
-    "text": "Industrial & Applied Computer Vision\n\n\n\n3D Scene Reconstruction from 2D Aerial Imagery\n\n\n3D Deep Learning Computer Vision PyTorch Aerospace\n\n\nCompany: Leonardo Divisione Velivoli (Turin, Italy) • Curricular Internship (MPM Master’s)\n\nInvestigated neural approaches to 3D scene reconstruction from 2D aerial imagery to overcome traditional limitations in airborne photogrammetry.\nAnalyzed hybrid pipelines uniting classical geometric multi-view stereo with deep learning representations (including neural implicit surfaces and depth estimation networks) to resolve ambiguities under complex lighting, low texture, and extreme perspective angles.\nEvaluated point cloud density, mesh completeness, and surface normal accuracy against ground-truth LIDAR datasets."
+    "text": "Industrial & Applied Computer Vision\n\n\n\n3D Scene Reconstruction from 2D Aerial Imagery\n\n\n3D Deep Learning Computer Vision PyTorch Aerospace\n\n\nCompany: Leonardo Divisione Velivoli (Turin, Italy) • Curricular Internship (MPM Master’s)\n\nFocused on 3D scene reconstruction from 2D images, combining computer vision techniques with 3D deep learning frameworks.\nExplored how machine learning methods can address the limitations of traditional photogrammetry in aerospace applications."
   },
   {
     "objectID": "portfolio.html#machine-learning-ai-implementations",

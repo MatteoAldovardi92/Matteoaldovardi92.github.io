@@ -24,9 +24,8 @@ A curated selection of my engineering work at Leonardo Velivoli, machine learnin
 
 **Company:** Leonardo Divisione Velivoli (Turin, Italy) &bull; *Curricular Internship (MPM Master's)*
 
-- Investigated neural approaches to 3D scene reconstruction from 2D aerial imagery to overcome traditional limitations in airborne photogrammetry.
-- Analyzed hybrid pipelines uniting classical geometric multi-view stereo with deep learning representations (including neural implicit surfaces and depth estimation networks) to resolve ambiguities under complex lighting, low texture, and extreme perspective angles.
-- Evaluated point cloud density, mesh completeness, and surface normal accuracy against ground-truth LIDAR datasets.
+- Focused on 3D scene reconstruction from 2D images, combining computer vision techniques with 3D deep learning frameworks.
+- Explored how machine learning methods can address the limitations of traditional photogrammetry in aerospace applications.
 :::
 
 ---
