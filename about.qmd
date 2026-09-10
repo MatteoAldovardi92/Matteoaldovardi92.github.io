@@ -24,13 +24,17 @@ about:
 
 ## Biography
 
-I am a mathematician and machine learning practitioner passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.
+I am a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino, passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.
 
-I am actively seeking opportunities in machine learning, data science, and quantitative modeling where I can apply mathematical rigor to complex real-world engineering problems.
+I am actively seeking opportunities in machine learning, data science, and data engineering where I can apply mathematical rigor and scalable engineering to complex real-world problems.
 
 ---
 
 ## Education
+
+- **M.Sc. in Data Science and Engineering**  
+  *Politecnico di Torino* | Sept 2025 – Present  
+  *Focus:* Big data architectures, distributed computing, statistical learning, and scalable machine learning pipelines.
 
 - **M.Sc. in Mathematical and Physical Methods for Engineering (MPM)**  
   *University of Turin* | Oct 2024  

@@ -18,7 +18,7 @@
     "href": "portfolio.html#machine-learning-ai-implementations",
     "title": "Portfolio & Selected Projects",
     "section": "Machine Learning & AI Implementations",
-    "text": "Machine Learning & AI Implementations\n\n\n\nReinforcement Learning: PPO Agent on CartPole\n\n\nPolicy Gradients Gymnasium Stable-Baselines3 PyTorch\n\n\nTrained a Proximal Policy Optimization (PPO) reinforcement learning agent to maintain dynamic equilibrium in the CartPole physical environment across 200 consecutive steps. Rendered side-by-side video evaluations comparing the high-variance random baseline with the stabilized converged policy.\n\nRead Technical Walkthrough →\n\n\n\n\n\nDimensionality Reduction: PCA & Eigenfaces from Scratch\n\n\nSpectral Theory NumPy scikit-learn Linear Algebra\n\n\nFormulated and derived Principal Component Analysis directly from eigendecomposition of the sample covariance matrix. Benchmarked a custom NumPy implementation against sklearn.decomposition.PCA on the Olivetti Faces dataset, projecting 4096-dimensional facial images into an optimal subspace explaining 90% of total variance.\n\nRead Technical Walkthrough →"
+    "text": "Machine Learning & AI Implementations\n\n\n\nReinforcement Learning: PPO Agent on CartPole\n\n\nPolicy Gradients Gymnasium Stable-Baselines3 PyTorch\n\n\nTrained a Proximal Policy Optimization (PPO) reinforcement learning agent to maintain dynamic equilibrium in the CartPole physical environment across 200 consecutive steps. Rendered side-by-side video evaluations comparing the high-variance random baseline with the stabilized converged policy.\n\nRead Technical Walkthrough →"
   },
   {
     "objectID": "portfolio.html#mathematics-academic-research",
@@ -84,102 +84,46 @@
     "text": "The code used in this post is adapted from Nicholas Renotte’s tutorial, “Reinforcement Learning in 3 Hours | Full Course using Python”, available on YouTube. The video provides an excellent walkthrough of training and evaluating reinforcement learning agents using stable-baselines3."
   },
   {
-    "objectID": "blog/post_08-11-24.html",
-    "href": "blog/post_08-11-24.html",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Site",
     "section": "",
-    "text": "Principal Component Analysis (PCA) is one of the most fundamental dimensionality reduction algorithms in machine learning and data science. When applied to 2D image data, the principal components can themselves be visualized as images, famously termed Eigenfaces (Turk & Pentland, 1991).\nIn this article, we formulate PCA from first principles using spectral matrix theory, implement a custom solver from scratch in NumPy, and evaluate it on the AT&T Olivetti Faces dataset, comparing reconstruction fidelity directly with sklearn.decomposition.PCA."
+    "text": "Image generated using DALL·E 3"
   },
   {
-    "objectID": "blog/post_08-11-24.html#mathematical-foundations",
-    "href": "blog/post_08-11-24.html#mathematical-foundations",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "1. Mathematical Foundations",
-    "text": "1. Mathematical Foundations\nLet our dataset consist of N face images, where each image is an h \\times w grayscale image flattened into a row vector x_i \\in \\mathbb{R}^D (D = h \\cdot w). The full data matrix is:\n\nX = \\begin{pmatrix} x_1^T \\\\ x_2^T \\\\ \\vdots \\\\ x_N^T \\end{pmatrix} \\in \\mathbb{R}^{N \\times D}\n\nFor the Olivetti dataset, N = 400 and each face is 64 \\times 64, meaning D = 4096.\n\nStep 1: Mean Centering\nCompute the empirical mean vector \\mu \\in \\mathbb{R}^D:\n\n\\mu = \\frac{1}{N} \\sum_{i=1}^N x_i\n\nThe centered data matrix \\tilde{X} is defined by subtracting \\mu from every row:\n\n\\tilde{X} = X - \\mathbf{1}_N \\mu^T \\in \\mathbb{R}^{N \\times D}\n\n\n\nStep 2: Covariance Matrix & Eigendecomposition\nThe sample covariance matrix \\Sigma \\in \\mathbb{R}^{D \\times D} is:\n\n\\Sigma = \\frac{1}{N - 1} \\tilde{X}^T \\tilde{X}\n\nSince \\Sigma is symmetric and positive semi-definite, the Spectral Theorem guarantees an orthonormal basis of eigenvectors v_1, v_2, \\dots, v_D \\in \\mathbb{R}^D with real non-negative eigenvalues:\n\n\\Sigma v_i = \\lambda_i v_i, \\quad \\lambda_1 \\ge \\lambda_2 \\ge \\dots \\ge \\lambda_D \\ge 0\n\n\n\nStep 3: Computational Trick for High Dimensions (N \\ll D)\nNotice that \\Sigma has dimensions 4096 \\times 4096 (\\approx 16.8 \\times 10^6 entries). Direct eigendecomposition of a 4096 \\times 4096 matrix is computationally intensive.\nHowever, since N = 400 \\ll D = 4096, \\text{rank}(\\tilde{X}) \\le N - 1 = 399. Following Sirovich & Kirby (1987), we can consider the smaller N \\times N inner product (Gram) matrix:\n\nK = \\frac{1}{N - 1} \\tilde{X} \\tilde{X}^T \\in \\mathbb{R}^{N \\times N}\n\nIf u_i \\in \\mathbb{R}^N is an eigenvector of K with eigenvalue \\lambda_i:\n\n\\frac{1}{N - 1} \\tilde{X} \\tilde{X}^T u_i = \\lambda_i u_i \\implies \\frac{1}{N - 1} \\tilde{X}^T \\tilde{X} (\\tilde{X}^T u_i) = \\lambda_i (\\tilde{X}^T u_i)\n\nThus, v_i \\propto \\tilde{X}^T u_i is an eigenvector of \\Sigma! Normalizing v_i = \\frac{\\tilde{X}^T u_i}{\\|\\tilde{X}^T u_i\\|} yields the exact principal components in \\mathcal{O}(N^3) time instead of \\mathcal{O}(D^3) time.\n\n\nStep 4: Subspace Selection (90% Explained Variance)\nThe proportion of total variance explained by the top k principal components is:\n\n\\eta(k) = \\frac{\\sum_{i=1}^k \\lambda_i}{\\sum_{i=1}^{\\min(N-1, D)} \\lambda_i}\n\nWe select the smallest k such that \\eta(k) \\ge 0.90.\n\n\nStep 5: Projection and Reconstruction\nLet V_k = (v_1, \\dots, v_k) \\in \\mathbb{R}^{D \\times k} be the projection matrix. The low-dimensional representation Z \\in \\mathbb{R}^{N \\times k} and the reconstructed faces \\hat{X} \\in \\mathbb{R}^{N \\times D} are:\n\nZ = \\tilde{X} V_k, \\qquad \\hat{X} = Z V_k^T + \\mathbf{1}_N \\mu^T"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html#the-olivetti-faces-dataset",
-    "href": "blog/post_08-11-24.html#the-olivetti-faces-dataset",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "2. The Olivetti Faces Dataset",
-    "text": "2. The Olivetti Faces Dataset\nThe dataset consists of 400 grayscale images representing 40 individuals (10 distinct images per subject with varying lighting, facial expressions, and angles):\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import fetch_olivetti_faces\n\n# Load faces dataset\nfaces_data = fetch_olivetti_faces(shuffle=True, random_state=42)\nfaces = faces_data.images  # shape: (400, 64, 64)\nX = faces_data.data        # shape: (400, 4096)\nn_samples, n_features = X.shape\n\nprint(f\"Dataset shape: {n_samples} samples, {n_features} features per sample.\")\n\n\n\nSample Grid from the Olivetti Faces Dataset"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html#scikit-learn-pca-benchmark",
-    "href": "blog/post_08-11-24.html#scikit-learn-pca-benchmark",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "3. Scikit-Learn PCA Benchmark",
-    "text": "3. Scikit-Learn PCA Benchmark\nWe first establish a baseline using sklearn.decomposition.PCA configured to retain 90% of the variance:\nfrom sklearn.decomposition import PCA\n\n# Fit scikit-learn PCA retaining 90% of explained variance\npca_sklearn = PCA(n_components=0.90, svd_solver='full')\nX_sklearn_trans = pca_sklearn.fit_transform(X)\nX_sklearn_recon = pca_sklearn.inverse_transform(X_sklearn_trans)\n\nprint(f\"Components selected by scikit-learn for 90% variance: {pca_sklearn.n_components_}\")"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html#custom-pca-implementation-from-scratch",
-    "href": "blog/post_08-11-24.html#custom-pca-implementation-from-scratch",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "4. Custom PCA Implementation from Scratch",
-    "text": "4. Custom PCA Implementation from Scratch\nBelow is the complete implementation of PCA in pure NumPy:\nclass CustomPCA:\n    def __init__(self, variance_threshold=0.90):\n        self.variance_threshold = variance_threshold\n        self.mean_ = None\n        self.components_ = None\n        self.explained_variance_ratio_ = None\n        self.n_components_ = None\n\n    def fit(self, X):\n        # 1. Compute empirical mean and center the data\n        self.mean_ = np.mean(X, axis=0)\n        X_centered = X - self.mean_\n        n_samples, n_features = X.shape\n\n        # 2. Compute inner product matrix (Sirovich-Kirby technique)\n        # K has shape (N, N) which is 400x400 instead of 4096x4096\n        K = np.dot(X_centered, X_centered.T) / (n_samples - 1)\n\n        # 3. Compute eigenvalues and eigenvectors of K\n        eigvals, eigvecs = np.linalg.eigh(K)\n\n        # Sort in descending order\n        idx = np.argsort(eigvals)[::-1]\n        eigvals = np.maximum(eigvals[idx], 0)  # enforce numerical non-negativity\n        eigvecs = eigvecs[:, idx]\n\n        # 4. Map back to feature-space eigenvectors V = X^T * U\n        V = np.dot(X_centered.T, eigvecs)\n        # Normalize each column of V to unit length\n        norms = np.linalg.norm(V, axis=0, keepdims=True)\n        norms[norms == 0] = 1.0\n        V = V / norms\n\n        # 5. Compute explained variance ratios\n        total_variance = np.sum(eigvals)\n        explained_variance_ratio = eigvals / total_variance\n\n        # 6. Select k components to satisfy the variance threshold\n        cumulative_variance = np.cumsum(explained_variance_ratio)\n        k = np.searchsorted(cumulative_variance, self.variance_threshold) + 1\n\n        self.n_components_ = k\n        self.components_ = V[:, :k].T  # shape: (k, D)\n        self.explained_variance_ratio_ = explained_variance_ratio[:k]\n\n        return self\n\n    def transform(self, X):\n        X_centered = X - self.mean_\n        return np.dot(X_centered, self.components_.T)\n\n    def inverse_transform(self, Z):\n        return np.dot(Z, self.components_) + self.mean_\nFit our custom implementation on the same dataset:\ncustom_pca = CustomPCA(variance_threshold=0.90)\ncustom_pca.fit(X)\nX_custom_trans = custom_pca.transform(X)\nX_custom_recon = custom_pca.inverse_transform(X_custom_trans)\n\nprint(f\"Custom PCA selected: {custom_pca.n_components_} components.\")"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html#visualizing-the-eigenfaces",
-    "href": "blog/post_08-11-24.html#visualizing-the-eigenfaces",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "5. Visualizing the Eigenfaces",
-    "text": "5. Visualizing the Eigenfaces\nEach principal component row in components_ has dimension 4096 and can be reshaped back into a 64 \\times 64 matrix. These are the orthogonal basis directions in image space:\nfig, axes = plt.subplots(2, 5, figsize=(12, 5),\n                         subplot_kw={'xticks':[], 'yticks':[]})\nfor i, ax in enumerate(axes.flat):\n    eigenface = custom_pca.components_[i].reshape(64, 64)\n    ax.imshow(eigenface, cmap='gray')\n    ax.set_title(f\"PC {i+1} ({custom_pca.explained_variance_ratio_[i]*100:.1f}%)\")\nplt.tight_layout()\nplt.show()\n\n\n\nTop Principal Components (Eigenfaces)\n\n\nNotice how the earliest principal components capture global lighting and head shape, while subsequent components isolate fine localized features like eyewear, hairline, and facial contours.\n\n\n\nExtended Set of Eigenfaces"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html#image-compression-reconstruction",
-    "href": "blog/post_08-11-24.html#image-compression-reconstruction",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "6. Image Compression & Reconstruction",
-    "text": "6. Image Compression & Reconstruction\nBy projecting an image onto only the top k components (reducing features from 4096 down to roughly 65-75), we compress the image by over 98% while retaining 90% of the statistical variance:\n\n\n\nOriginal vs. Compressed Image at 90% Variance"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html#numerical-verification-against-scikit-learn",
-    "href": "blog/post_08-11-24.html#numerical-verification-against-scikit-learn",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "7. Numerical Verification Against Scikit-Learn",
-    "text": "7. Numerical Verification Against Scikit-Learn\nTo confirm mathematical correctness, we quantify the reconstruction difference between our custom implementation and scikit-learn:\n# Compute Mean Absolute Error between reconstructions\nmae_diff = np.mean(np.abs(X_custom_recon - X_sklearn_recon))\nmax_diff = np.max(np.abs(X_custom_recon - X_sklearn_recon))\n\nprint(f\"Mean Absolute Difference: {mae_diff:.6e}\")\nprint(f\"Max Absolute Difference:  {max_diff:.6e}\")\nThe difference is on the order of 10^{-14}, which is machine-precision zero:\n\n\n\nReconstruction Comparison: Custom NumPy vs. scikit-learn"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html#conclusion",
-    "href": "blog/post_08-11-24.html#conclusion",
-    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
-    "section": "Conclusion",
-    "text": "Conclusion\nBy leveraging the Sirovich-Kirby inner product formulation, we converted an expensive \\mathcal{O}(D^3) eigendecomposition into an efficient \\mathcal{O}(N^3) procedure that produces exact principal components. The resulting basis vectors capture the dominant geometric variations of human faces, enabling high-ratio compression and fast subspace retrieval."
-  },
-  {
-    "objectID": "index.html#recent-articles",
-    "href": "index.html#recent-articles",
-    "title": "Matteo Aldovardi",
-    "section": "Recent Articles",
-    "text": "Recent Articles\n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA and Eigenfaces with the Olivetti Dataset\n\n7 min\n\n\nMachine Learning\n\nLinear Algebra\n\nPCA\n\nComputer Vision\n\n\n\nDeriving Principal Component Analysis from spectral theory, implementing it from scratch in NumPy, and compressing high-dimensional facial images.\n\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n4 min\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\nSep 18, 2024\n\n\n\n\n\n\nNo matching items\n\n\nExplore All Articles →"
+    "objectID": "index.html#recent-posts",
+    "href": "index.html#recent-posts",
+    "title": "Welcome to My Site",
+    "section": "Recent Posts",
+    "text": "Recent Posts\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3"
   },
   {
     "objectID": "blog/index.html",
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA and Eigenfaces with the Olivetti Dataset\n\n\n\nMachine Learning\n\nLinear Algebra\n\nPCA\n\nComputer Vision\n\n\n\nDeriving Principal Component Analysis from spectral theory, implementing it from scratch in NumPy, and compressing high-dimensional facial images.\n\n\n\n\n\nNov 8, 2024\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\n\n\nSep 18, 2024\n\n4 min\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\n\n\nSep 18, 2024\n\n4 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Matteo Aldovardi",
     "section": "",
-    "text": "I am a mathematician and machine learning practitioner passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and quantitative modeling where I can apply mathematical rigor to complex real-world engineering problems."
+    "text": "I am a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino, passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and data engineering where I can apply mathematical rigor and scalable engineering to complex real-world problems."
   },
   {
     "objectID": "about.html#biography",
     "href": "about.html#biography",
     "title": "Matteo Aldovardi",
     "section": "",
-    "text": "I am a mathematician and machine learning practitioner passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and quantitative modeling where I can apply mathematical rigor to complex real-world engineering problems."
+    "text": "I am a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino, passionate about bridging deep mathematical rigor with practical, data-driven AI systems. My background spans harmonic analysis, operator theory, computer vision, 3D deep learning, and reinforcement learning.\nI am actively seeking opportunities in machine learning, data science, and data engineering where I can apply mathematical rigor and scalable engineering to complex real-world problems."
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "Matteo Aldovardi",
     "section": "Education",
-    "text": "Education\n\nM.Sc. in Mathematical and Physical Methods for Engineering (MPM)\nUniversity of Turin | Oct 2024\nFocus: Mathematical modeling, numerical methods, computer vision, and applied machine learning.\nM.Sc. in Mathematics\nUniversity of Pisa | 2022\nThesis: La teoria di Littlewood-Paley e alcune sue applicazioni in analisi\nFocus: Harmonic Analysis, PDE theory, and Functional Analysis.\nB.Sc. in Mathematics\nUniversity of Pisa | 2018\nFocus: Algebra, Calculus, Probability, and Analysis."
+    "text": "Education\n\nM.Sc. in Data Science and Engineering\nPolitecnico di Torino | Sept 2025 – Present\nFocus: Big data architectures, distributed computing, statistical learning, and scalable machine learning pipelines.\nM.Sc. in Mathematical and Physical Methods for Engineering (MPM)\nUniversity of Turin | Oct 2024\nFocus: Mathematical modeling, numerical methods, computer vision, and applied machine learning.\nM.Sc. in Mathematics\nUniversity of Pisa | 2022\nThesis: La teoria di Littlewood-Paley e alcune sue applicazioni in analisi\nFocus: Harmonic Analysis, PDE theory, and Functional Analysis.\nB.Sc. in Mathematics\nUniversity of Pisa | 2018\nFocus: Algebra, Calculus, Probability, and Analysis."
   },
   {
     "objectID": "about.html#professional-experience",

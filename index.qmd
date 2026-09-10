@@ -1,74 +1,19 @@
 ---
-title: "Matteo Aldovardi"
-subtitle: "Applied Mathematics &bull; Machine Learning &bull; Computer Vision"
-page-layout: full
+title: "Welcome to My Site"
+description: "This is a [Quarto](https://quarto.org/) Website"
+author: "Matteo Aldovardi"
+date: "2024-09-11"
 toc: false
-listing:
-  - id: recent-posts
-    contents:
-      - "blog/*.qmd"
-      - "!blog/index.qmd"
-    sort: "date desc"
-    type: grid
-    max-items: 3
-    grid-columns: 3
-    fields: [image, date, title, description, categories, reading-time]
 ---
 
-::: {#hero-banner}
-![](images/banner.jpeg){fig-align="center" style="border-radius: 12px; max-height: 280px; width: 100%; object-fit: cover; margin-bottom: 2rem; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"}
+::: {#headbar layout-ncol=1}
+![Image generated using DALL·E 3](images/banner.jpeg){width=100% height=300px}
 :::
 
-<div class="hero-header text-center">
-<h1 class="hero-title">Bridging Mathematical Rigor &amp; Modern AI</h1>
-<p class="hero-subtitle">M.Sc. in Mathematics (Pisa) &amp; M.Sc. in Mathematical and Physical Methods for Engineering (Turin)</p>
+# Purpose of This Site
 
-<div class="hero-badges justify-content-center">
-<span class="hero-badge">🌐 3D Computer Vision</span>
-<span class="hero-badge">📐 Harmonic Analysis &amp; Operators</span>
-<span class="hero-badge">🤖 Deep Reinforcement Learning</span>
-<span class="hero-badge">⚡ Vector Search &amp; Optimization</span>
-</div>
+Hello! I'm Matteo Aldovardi, a mathematician and graduate student in Data Science and Engineering at Politecnico di Torino (holding previous degrees from the University of Pisa and University of Turin). This site serves as my personal blog and portfolio, where I document my exploration of data science, AI, and mathematics, sharing insights, projects, and my learning journey along the way. Check out my [portfolio](portfolio.qmd) for projects and examples of my work, or visit my [blog](blog/index.qmd) for technical notes and write-ups.
 
-<div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
-<a href="portfolio.qmd" class="btn btn-primary px-4 py-2">Explore Portfolio &rarr;</a>
-<a href="blog/index.qmd" class="btn btn-outline-primary px-4 py-2">Read Blog Articles</a>
-<a href="assets/cv/Matteo_Aldovardi_CV.pdf" class="btn btn-outline-secondary px-4 py-2">Download CV (PDF)</a>
-</div>
-</div>
+## Recent Posts
 
-::: {.grid .mb-5}
-
-::: {.g-col-12 .g-col-md-4}
-::: {.card .h-100 .p-3}
-### 🚀 Applied 3D Vision
-Scene reconstruction from 2D aerial imagery using 3D deep learning and neural representations at Leonardo Divisione Velivoli.
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {.card .h-100 .p-3}
-### 🧠 Machine Learning & AI
-Principled implementations in PyTorch and NumPy — from PPO reinforcement learning and PCA spectral decomposition to KNN from scratch.
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {.card .h-100 .p-3}
-### 📐 Theoretical Foundations
-Research in pseudo-differential operators, fractional Hardy inequalities (Springer, 2023), and Littlewood-Paley harmonic analysis.
-:::
-:::
-
-:::
-
----
-
-## Recent Articles
-
-::: {#recent-posts}
-:::
-
-<div style="text-align: right; margin-top: 1.5rem;">
-  <a href="blog/index.qmd" class="btn btn-outline-primary">Explore All Articles &rarr;</a>
-</div>
+- [Training and Visualizing a PPO Agent on CartPole using Stable Baselines3](blog/post_18-09-24.qmd)

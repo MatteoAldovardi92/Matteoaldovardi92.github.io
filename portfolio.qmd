@@ -51,24 +51,6 @@ Trained a Proximal Policy Optimization (PPO) reinforcement learning agent to mai
 </div>
 :::
 
-::: {.project-card}
-::: {.project-header}
-<h3 class="project-title">Dimensionality Reduction: PCA & Eigenfaces from Scratch</h3>
-<div>
-  <span class="tag-pill">Spectral Theory</span>
-  <span class="tag-pill">NumPy</span>
-  <span class="tag-pill">scikit-learn</span>
-  <span class="tag-pill">Linear Algebra</span>
-</div>
-:::
-
-Formulated and derived Principal Component Analysis directly from eigendecomposition of the sample covariance matrix. Benchmarked a custom NumPy implementation against `sklearn.decomposition.PCA` on the Olivetti Faces dataset, projecting 4096-dimensional facial images into an optimal subspace explaining 90% of total variance.
-
-<div style="margin-top: 1rem;">
-  <a href="blog/post_08-11-24.qmd" class="btn btn-sm btn-outline-primary">Read Technical Walkthrough &rarr;</a>
-</div>
-:::
-
 ---
 
 ## Mathematics & Academic Research
