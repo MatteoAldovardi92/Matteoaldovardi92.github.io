@@ -24,7 +24,7 @@ about:
 
 ## Biography
 
-I am a mathematics graduate currently enrolled in the Data Engineering program at Politecnico di Torino. My background bridges theoretical mathematical rigor with applied computational engineering: after completing my Bachelor's and Master's degrees in Mathematics at the University of Pisa, I completed a 1-year Master's in Mathematical and Physical Methods for Engineering (MPM) at the University of Turin (UniTO), specializing in numerical methods and 3D computer vision during an internship at Leonardo Velivoli.
+I am a mathematics graduate currently enrolled in the Data Engineering program at Politecnico di Torino. My background bridges theoretical mathematical rigor with applied computational engineering: after completing my Bachelor's and Master's degrees in Mathematics at the University of Pisa, I completed a 1-year Master's in Mathematical and Physical Methods for Engineering (MPM) at the University of Turin (UniTO), where I worked on 3D computer vision and deep learning during an internship at Leonardo Velivoli.
 
 I am actively seeking opportunities in data engineering, machine learning, and data science where I can apply mathematical problem-solving and scalable software engineering to real-world data systems.
 
@@ -38,7 +38,7 @@ I am actively seeking opportunities in data engineering, machine learning, and d
 
 - **1-Year Master in Mathematical and Physical Methods for Engineering (MPM)**  
   *University of Turin (UniTO)* | Completed Oct 2024  
-  *Focus:* Mathematical modeling, numerical methods, computer vision, and applied machine learning.
+  *Focus:* Applied mathematics, machine learning, and computer vision.
 
 - **M.Sc. in Mathematics**  
   *University of Pisa* | Completed 2022  
