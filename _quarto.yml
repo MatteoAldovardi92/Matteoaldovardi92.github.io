@@ -5,6 +5,7 @@ project:
 website:
   title: "Matteo Aldovardi"
   site-url: "https://matteoaldovardi92.github.io"
+  favicon: images/favicon.svg
   search: true
   navbar:
     title: "Matteo Aldovardi"
@@ -37,8 +38,8 @@ website:
 format:
   html:
     theme:
-      light: cosmo
-      dark: slate
+      light: [cosmo, styles.scss]
+      dark: [slate, styles.scss]
     toc: true
     toc-depth: 3
     toc-location: right

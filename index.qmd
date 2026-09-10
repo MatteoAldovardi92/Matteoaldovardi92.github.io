@@ -1,6 +1,6 @@
 ---
 title: "Matteo Aldovardi"
-subtitle: "Mathematics &bull; Machine Learning &bull; Computer Vision"
+subtitle: "Applied Mathematics &bull; Machine Learning &bull; Computer Vision"
 page-layout: full
 toc: false
 listing:
@@ -16,17 +16,51 @@ listing:
 ---
 
 ::: {#hero-banner}
-![](images/banner.jpeg){fig-align="center" style="border-radius: 10px; max-height: 280px; width: 100%; object-fit: cover; margin-bottom: 2rem;"}
+![](images/banner.jpeg){fig-align="center" style="border-radius: 12px; max-height: 280px; width: 100%; object-fit: cover; margin-bottom: 2rem; box-shadow: 0 8px 24px rgba(0,0,0,0.12);"}
 :::
 
-## Welcome
+<div class="hero-header text-center">
+<h1 class="hero-title">Bridging Mathematical Rigor &amp; Modern AI</h1>
+<p class="hero-subtitle">M.Sc. in Mathematics (Pisa) &amp; M.Sc. in Mathematical and Physical Methods for Engineering (Turin)</p>
 
-Hello and welcome! I am **Matteo Aldovardi**, a mathematician and machine learning practitioner with a background in harmonic analysis, operator theory, and 3D computer vision.
+<div class="hero-badges justify-content-center">
+<span class="hero-badge">🌐 3D Computer Vision</span>
+<span class="hero-badge">📐 Harmonic Analysis &amp; Operators</span>
+<span class="hero-badge">🤖 Deep Reinforcement Learning</span>
+<span class="hero-badge">⚡ Vector Search &amp; Optimization</span>
+</div>
 
-This site serves as an open portfolio and knowledge hub where I share:
-- [**Portfolio**](portfolio.qmd): Industry projects (such as 3D aerial scene reconstruction at Leonardo Velivoli), pure math research publications, and machine learning implementations.
-- [**Blog**](blog/index.qmd): In-depth tutorials and code implementations in machine learning, mathematical modeling, and data science.
-- [**About Me**](about.qmd): Academic journey, technical background, and downloadable CV.
+<div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+<a href="portfolio.qmd" class="btn btn-primary px-4 py-2">Explore Portfolio &rarr;</a>
+<a href="blog/index.qmd" class="btn btn-outline-primary px-4 py-2">Read Blog Articles</a>
+<a href="assets/cv/Matteo_Aldovardi_CV.pdf" class="btn btn-outline-secondary px-4 py-2">Download CV (PDF)</a>
+</div>
+</div>
+
+::: {.grid .mb-5}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3}
+### 🚀 Applied 3D Vision
+Scene reconstruction from 2D aerial imagery using 3D deep learning and neural representations at Leonardo Divisione Velivoli.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3}
+### 🧠 Machine Learning & AI
+Principled implementations in PyTorch and NumPy — from PPO reinforcement learning and PCA spectral decomposition to KNN from scratch.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3}
+### 📐 Theoretical Foundations
+Research in pseudo-differential operators, fractional Hardy inequalities (Springer, 2023), and Littlewood-Paley harmonic analysis.
+:::
+:::
+
+:::
 
 ---
 
@@ -35,6 +69,6 @@ This site serves as an open portfolio and knowledge hub where I share:
 ::: {#recent-posts}
 :::
 
-<div style="text-align: right; margin-top: 1rem;">
+<div style="text-align: right; margin-top: 1.5rem;">
   <a href="blog/index.qmd" class="btn btn-outline-primary">Explore All Articles &rarr;</a>
 </div>

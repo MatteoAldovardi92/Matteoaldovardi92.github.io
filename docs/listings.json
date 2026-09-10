@@ -3,16 +3,14 @@
     "listing": "/index.html",
     "items": [
       "/blog/post_08-11-24.html",
-      "/blog/post_18-09-24.html",
-      "/blog/post_11-09-24.html"
+      "/blog/post_18-09-24.html"
     ]
   },
   {
     "listing": "/blog/index.html",
     "items": [
       "/blog/post_08-11-24.html",
-      "/blog/post_18-09-24.html",
-      "/blog/post_11-09-24.html"
+      "/blog/post_18-09-24.html"
     ]
   }
 ]

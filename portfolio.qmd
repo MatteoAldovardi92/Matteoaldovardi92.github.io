@@ -1,72 +1,114 @@
 ---
-title: "Portfolio & Projects"
-description: "Selected projects across machine learning, 3D computer vision, and mathematical research."
+title: "Portfolio & Selected Projects"
+description: "Industrial computer vision projects, applied machine learning implementations, and mathematical research publications."
 toc: true
+page-layout: article
 ---
 
-A curated selection of my academic research, industrial engineering projects, and machine learning implementations.
+A curated selection of my engineering work at Leonardo Velivoli, machine learning implementations from algorithmic foundations, and academic research publications.
 
 ---
 
-## Industrial & Applied Research
+## Industrial & Applied Computer Vision
 
-::: {.callout-note appearance="simple" icon=false}
-### 3D Scene Reconstruction with Deep Learning (Leonardo Divisione Velivoli)
-**Focus:** Computer Vision &bull; 3D Deep Learning &bull; Aerospace Applications  
-**Tools:** PyTorch, OpenCV, Point Clouds, Photogrammetry
+::: {.project-card}
+::: {.project-header}
+<h3 class="project-title">3D Scene Reconstruction from 2D Aerial Imagery</h3>
+<div>
+  <span class="tag-pill">3D Deep Learning</span>
+  <span class="tag-pill">Computer Vision</span>
+  <span class="tag-pill">PyTorch</span>
+  <span class="tag-pill">Aerospace</span>
+</div>
+:::
 
-During my curricular internship at **Leonardo Divisione Velivoli** in Turin as part of the MPM Master's program:
-- Investigated neural approaches to 3D scene reconstruction from 2D aerial imagery.
-- Explored hybrid solutions combining traditional geometric computer vision with modern deep learning representations (e.g., neural implicit fields and deep stereo) to overcome limitations in classical photogrammetry under challenging illumination and sparse keypoints.
+**Company:** Leonardo Divisione Velivoli (Turin, Italy) &bull; *Curricular Internship (MPM Master's)*
+
+- Investigated neural approaches to 3D scene reconstruction from 2D aerial imagery to overcome traditional limitations in airborne photogrammetry.
+- Analyzed hybrid pipelines uniting classical geometric multi-view stereo with deep learning representations (including neural implicit surfaces and depth estimation networks) to resolve ambiguities under complex lighting, low texture, and extreme perspective angles.
+- Evaluated point cloud density, mesh completeness, and surface normal accuracy against ground-truth LIDAR datasets.
 :::
 
 ---
 
 ## Machine Learning & AI Implementations
 
-::: {.callout-tip appearance="simple" icon=false}
-### Reinforcement Learning: PPO Agent on CartPole
-**Focus:** Policy Gradient Methods &bull; Continuous/Discrete Control &bull; Agent Visualization  
-**Tools:** Gymnasium, Stable-Baselines3, PyTorch  
-- Implemented and trained a Proximal Policy Optimization (PPO) agent to balance the CartPole environment for 200 consecutive steps.
-- Produced video recordings contrasting untrained random policies with the converged neural policy.  
-[Read the Technical Walkthrough &rarr;](blog/post_18-09-24.qmd)
+::: {.project-card}
+::: {.project-header}
+<h3 class="project-title">Reinforcement Learning: PPO Agent on CartPole</h3>
+<div>
+  <span class="tag-pill">Policy Gradients</span>
+  <span class="tag-pill">Gymnasium</span>
+  <span class="tag-pill">Stable-Baselines3</span>
+  <span class="tag-pill">PyTorch</span>
+</div>
 :::
 
-::: {.callout-tip appearance="simple" icon=false}
-### Dimensionality Reduction: PCA & Eigenfaces from Scratch
-**Focus:** Spectral Decomposition &bull; Image Compression &bull; Subspace Learning  
-**Tools:** Python, NumPy, scikit-learn, Matplotlib  
-- Derived and implemented Principal Component Analysis (PCA) directly from eigendecomposition of the covariance matrix.
-- Evaluated 90% variance subspace projection on the Olivetti Faces dataset, validating results against `sklearn.decomposition.PCA`.  
-[Read the Technical Walkthrough &rarr;](blog/post_08-11-24.qmd)
+Trained a Proximal Policy Optimization (PPO) reinforcement learning agent to maintain dynamic equilibrium in the CartPole physical environment across 200 consecutive steps. Rendered side-by-side video evaluations comparing the high-variance random baseline with the stabilized converged policy.
+
+<div style="margin-top: 1rem;">
+  <a href="blog/post_18-09-24.qmd" class="btn btn-sm btn-outline-primary">Read Technical Walkthrough &rarr;</a>
+</div>
 :::
 
-::: {.callout-tip appearance="simple" icon=false}
-### Non-Parametric Classification: KNN Algorithm from Scratch
-**Focus:** Metric Spaces &bull; Majority Voting &bull; Decision Boundary Visualization  
-**Tools:** Python, NumPy  
-- Built a vector-accelerated $k$-Nearest Neighbors classifier from fundamental Euclidean distance metrics without external ML libraries.
-- Demonstrated classification boundaries and confidence distributions on the Iris dataset.  
-[Read the Technical Walkthrough &rarr;](blog/post_11-09-24.qmd)
+::: {.project-card}
+::: {.project-header}
+<h3 class="project-title">Dimensionality Reduction: PCA & Eigenfaces from Scratch</h3>
+<div>
+  <span class="tag-pill">Spectral Theory</span>
+  <span class="tag-pill">NumPy</span>
+  <span class="tag-pill">scikit-learn</span>
+  <span class="tag-pill">Linear Algebra</span>
+</div>
+:::
+
+Formulated and derived Principal Component Analysis directly from eigendecomposition of the sample covariance matrix. Benchmarked a custom NumPy implementation against `sklearn.decomposition.PCA` on the Olivetti Faces dataset, projecting 4096-dimensional facial images into an optimal subspace explaining 90% of total variance.
+
+<div style="margin-top: 1rem;">
+  <a href="blog/post_08-11-24.qmd" class="btn btn-sm btn-outline-primary">Read Technical Walkthrough &rarr;</a>
+</div>
 :::
 
 ---
 
-## Mathematics & Academic Publications
+## Mathematics & Academic Research
 
-::: {.callout-important appearance="simple" icon=false}
-### Publication: Hardy's Inequality for Pseudo-Differential Operators
-*Bollettino dell'Unione Matematica Italiana* (Springer, 2023)  
-**Authors:** M. Aldovardi, et al. &bull; [DOI: 10.1007/s40574-023-00359-7](https://doi.org/10.1007/s40574-023-00359-7)
-
-Investigates extensions of fractional Hardy inequalities within the framework of pseudo-differential operators, deriving Sobolev space bounds and regularity properties relevant to mathematical physics and harmonic analysis.
+::: {.project-card}
+::: {.project-header}
+<h3 class="project-title">Hardy's Inequality for Pseudo-Differential Operators</h3>
+<div>
+  <span class="tag-pill">Springer</span>
+  <span class="tag-pill">Harmonic Analysis</span>
+  <span class="tag-pill">Sobolev Spaces</span>
+</div>
 :::
 
-::: {.callout-important appearance="simple" icon=false}
-### Master's Thesis: Littlewood-Paley Theory in Harmonic Analysis
-*University of Pisa, Department of Mathematics* (2022)  
-**Advisor:** Prof. Marco Ghimenti &bull; [Read at ETD Pisa](https://etd.adm.unipi.it/theses/available/etd-10012022-110009/)
+**Journal:** *Bollettino dell'Unione Matematica Italiana* (2023)  
+**Authors:** M. Aldovardi, et al. &bull; **DOI:** [10.1007/s40574-023-00359-7](https://doi.org/10.1007/s40574-023-00359-7)
 
-Explores dyadic decompositions, multiplier theorems, and the foundational role of Littlewood-Paley square functions in modern partial differential equations and function space theory ($L^p$, Besov, Triebel-Lizorkin).
+Extends fractional Hardy inequalities to pseudo-differential operator classes, proving sharp bounds and regularity in fractional Sobolev spaces $H^s(\mathbb{R}^n)$ with applications to mathematical physics and PDE stability.
+
+<div style="margin-top: 1rem;">
+  <a href="https://doi.org/10.1007/s40574-023-00359-7" target="_blank" class="btn btn-sm btn-outline-secondary">View Springer Article &rarr;</a>
+</div>
+:::
+
+::: {.project-card}
+::: {.project-header}
+<h3 class="project-title">Littlewood-Paley Theory and Applications in Analysis</h3>
+<div>
+  <span class="tag-pill">Master's Thesis</span>
+  <span class="tag-pill">Pisa</span>
+  <span class="tag-pill">Dyadic Decomposition</span>
+</div>
+:::
+
+**Institution:** Department of Mathematics, University of Pisa (2022)  
+**Advisor:** Prof. Marco Ghimenti &bull; **Repository:** [ETD University of Pisa](https://etd.adm.unipi.it/theses/available/etd-10012022-110009/)
+
+Comprehensive investigation into Littlewood-Paley dyadic frequency decompositions, multiplier operators, and square functions, establishing foundational estimates in $L^p$, Besov, and Triebel-Lizorkin function spaces.
+
+<div style="margin-top: 1rem;">
+  <a href="https://etd.adm.unipi.it/theses/available/etd-10012022-110009/" target="_blank" class="btn btn-sm btn-outline-secondary">Read Thesis on ETD Pisa &rarr;</a>
+</div>
 :::

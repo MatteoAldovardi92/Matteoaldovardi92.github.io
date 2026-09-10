@@ -2,30 +2,30 @@
   {
     "objectID": "portfolio.html",
     "href": "portfolio.html",
-    "title": "Portfolio & Projects",
+    "title": "Portfolio & Selected Projects",
     "section": "",
-    "text": "A curated selection of my academic research, industrial engineering projects, and machine learning implementations."
+    "text": "A curated selection of my engineering work at Leonardo Velivoli, machine learning implementations from algorithmic foundations, and academic research publications."
   },
   {
-    "objectID": "portfolio.html#industrial-applied-research",
-    "href": "portfolio.html#industrial-applied-research",
-    "title": "Portfolio & Projects",
-    "section": "Industrial & Applied Research",
-    "text": "Industrial & Applied Research\n\n\n\n\n\n\n3D Scene Reconstruction with Deep Learning (Leonardo Divisione Velivoli)\n\n\n\nFocus: Computer Vision • 3D Deep Learning • Aerospace Applications\nTools: PyTorch, OpenCV, Point Clouds, Photogrammetry\nDuring my curricular internship at Leonardo Divisione Velivoli in Turin as part of the MPM Master’s program: - Investigated neural approaches to 3D scene reconstruction from 2D aerial imagery. - Explored hybrid solutions combining traditional geometric computer vision with modern deep learning representations (e.g., neural implicit fields and deep stereo) to overcome limitations in classical photogrammetry under challenging illumination and sparse keypoints."
+    "objectID": "portfolio.html#industrial-applied-computer-vision",
+    "href": "portfolio.html#industrial-applied-computer-vision",
+    "title": "Portfolio & Selected Projects",
+    "section": "Industrial & Applied Computer Vision",
+    "text": "Industrial & Applied Computer Vision\n\n\n\n3D Scene Reconstruction from 2D Aerial Imagery\n\n\n3D Deep Learning Computer Vision PyTorch Aerospace\n\n\nCompany: Leonardo Divisione Velivoli (Turin, Italy) • Curricular Internship (MPM Master’s)\n\nInvestigated neural approaches to 3D scene reconstruction from 2D aerial imagery to overcome traditional limitations in airborne photogrammetry.\nAnalyzed hybrid pipelines uniting classical geometric multi-view stereo with deep learning representations (including neural implicit surfaces and depth estimation networks) to resolve ambiguities under complex lighting, low texture, and extreme perspective angles.\nEvaluated point cloud density, mesh completeness, and surface normal accuracy against ground-truth LIDAR datasets."
   },
   {
     "objectID": "portfolio.html#machine-learning-ai-implementations",
     "href": "portfolio.html#machine-learning-ai-implementations",
-    "title": "Portfolio & Projects",
+    "title": "Portfolio & Selected Projects",
     "section": "Machine Learning & AI Implementations",
-    "text": "Machine Learning & AI Implementations\n\n\n\n\n\n\nReinforcement Learning: PPO Agent on CartPole\n\n\n\nFocus: Policy Gradient Methods • Continuous/Discrete Control • Agent Visualization\nTools: Gymnasium, Stable-Baselines3, PyTorch\n- Implemented and trained a Proximal Policy Optimization (PPO) agent to balance the CartPole environment for 200 consecutive steps. - Produced video recordings contrasting untrained random policies with the converged neural policy.\nRead the Technical Walkthrough →\n\n\n\n\n\n\n\n\nDimensionality Reduction: PCA & Eigenfaces from Scratch\n\n\n\nFocus: Spectral Decomposition • Image Compression • Subspace Learning\nTools: Python, NumPy, scikit-learn, Matplotlib\n- Derived and implemented Principal Component Analysis (PCA) directly from eigendecomposition of the covariance matrix. - Evaluated 90% variance subspace projection on the Olivetti Faces dataset, validating results against sklearn.decomposition.PCA.\nRead the Technical Walkthrough →\n\n\n\n\n\n\n\n\nNon-Parametric Classification: KNN Algorithm from Scratch\n\n\n\nFocus: Metric Spaces • Majority Voting • Decision Boundary Visualization\nTools: Python, NumPy\n- Built a vector-accelerated k-Nearest Neighbors classifier from fundamental Euclidean distance metrics without external ML libraries. - Demonstrated classification boundaries and confidence distributions on the Iris dataset.\nRead the Technical Walkthrough →"
+    "text": "Machine Learning & AI Implementations\n\n\n\nReinforcement Learning: PPO Agent on CartPole\n\n\nPolicy Gradients Gymnasium Stable-Baselines3 PyTorch\n\n\nTrained a Proximal Policy Optimization (PPO) reinforcement learning agent to maintain dynamic equilibrium in the CartPole physical environment across 200 consecutive steps. Rendered side-by-side video evaluations comparing the high-variance random baseline with the stabilized converged policy.\n\nRead Technical Walkthrough →\n\n\n\n\n\nDimensionality Reduction: PCA & Eigenfaces from Scratch\n\n\nSpectral Theory NumPy scikit-learn Linear Algebra\n\n\nFormulated and derived Principal Component Analysis directly from eigendecomposition of the sample covariance matrix. Benchmarked a custom NumPy implementation against sklearn.decomposition.PCA on the Olivetti Faces dataset, projecting 4096-dimensional facial images into an optimal subspace explaining 90% of total variance.\n\nRead Technical Walkthrough →"
   },
   {
-    "objectID": "portfolio.html#mathematics-academic-publications",
-    "href": "portfolio.html#mathematics-academic-publications",
-    "title": "Portfolio & Projects",
-    "section": "Mathematics & Academic Publications",
-    "text": "Mathematics & Academic Publications\n\n\n\n\n\n\nPublication: Hardy’s Inequality for Pseudo-Differential Operators\n\n\n\nBollettino dell’Unione Matematica Italiana (Springer, 2023)\nAuthors: M. Aldovardi, et al. • DOI: 10.1007/s40574-023-00359-7\nInvestigates extensions of fractional Hardy inequalities within the framework of pseudo-differential operators, deriving Sobolev space bounds and regularity properties relevant to mathematical physics and harmonic analysis.\n\n\n\n\n\n\n\n\nMaster’s Thesis: Littlewood-Paley Theory in Harmonic Analysis\n\n\n\nUniversity of Pisa, Department of Mathematics (2022)\nAdvisor: Prof. Marco Ghimenti • Read at ETD Pisa\nExplores dyadic decompositions, multiplier theorems, and the foundational role of Littlewood-Paley square functions in modern partial differential equations and function space theory (L^p, Besov, Triebel-Lizorkin)."
+    "objectID": "portfolio.html#mathematics-academic-research",
+    "href": "portfolio.html#mathematics-academic-research",
+    "title": "Portfolio & Selected Projects",
+    "section": "Mathematics & Academic Research",
+    "text": "Mathematics & Academic Research\n\n\n\nHardy’s Inequality for Pseudo-Differential Operators\n\n\nSpringer Harmonic Analysis Sobolev Spaces\n\n\nJournal: Bollettino dell’Unione Matematica Italiana (2023)\nAuthors: M. Aldovardi, et al. • DOI: 10.1007/s40574-023-00359-7\nExtends fractional Hardy inequalities to pseudo-differential operator classes, proving sharp bounds and regularity in fractional Sobolev spaces H^s(\\mathbb{R}^n) with applications to mathematical physics and PDE stability.\n\nView Springer Article →\n\n\n\n\n\nLittlewood-Paley Theory and Applications in Analysis\n\n\nMaster’s Thesis Pisa Dyadic Decomposition\n\n\nInstitution: Department of Mathematics, University of Pisa (2022)\nAdvisor: Prof. Marco Ghimenti • Repository: ETD University of Pisa\nComprehensive investigation into Littlewood-Paley dyadic frequency decompositions, multiplier operators, and square functions, establishing foundational estimates in L^p, Besov, and Triebel-Lizorkin function spaces.\n\nRead Thesis on ETD Pisa →"
   },
   {
     "objectID": "blog/post_18-09-24.html",
@@ -84,88 +84,81 @@
     "text": "The code used in this post is adapted from Nicholas Renotte’s tutorial, “Reinforcement Learning in 3 Hours | Full Course using Python”, available on YouTube. The video provides an excellent walkthrough of training and evaluating reinforcement learning agents using stable-baselines3."
   },
   {
-    "objectID": "blog/post_11-09-24.html",
-    "href": "blog/post_11-09-24.html",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
+    "objectID": "blog/post_08-11-24.html",
+    "href": "blog/post_08-11-24.html",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
     "section": "",
-    "text": "In this post, I’ll demonstrate how to implement the K-Nearest Neighbors (KNN) algorithm from scratch in Python. We will apply the algorithm to the Iris dataset, visualize the classification results, and include images of the predicted Iris flower types."
+    "text": "Principal Component Analysis (PCA) is one of the most fundamental dimensionality reduction algorithms in machine learning and data science. When applied to 2D image data, the principal components can themselves be visualized as images, famously termed Eigenfaces (Turk & Pentland, 1991).\nIn this article, we formulate PCA from first principles using spectral matrix theory, implement a custom solver from scratch in NumPy, and evaluate it on the AT&T Olivetti Faces dataset, comparing reconstruction fidelity directly with sklearn.decomposition.PCA."
   },
   {
-    "objectID": "blog/post_11-09-24.html#overview",
-    "href": "blog/post_11-09-24.html#overview",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
-    "section": "",
-    "text": "In this post, I’ll demonstrate how to implement the K-Nearest Neighbors (KNN) algorithm from scratch in Python. We will apply the algorithm to the Iris dataset, visualize the classification results, and include images of the predicted Iris flower types."
+    "objectID": "blog/post_08-11-24.html#mathematical-foundations",
+    "href": "blog/post_08-11-24.html#mathematical-foundations",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "1. Mathematical Foundations",
+    "text": "1. Mathematical Foundations\nLet our dataset consist of N face images, where each image is an h \\times w grayscale image flattened into a row vector x_i \\in \\mathbb{R}^D (D = h \\cdot w). The full data matrix is:\n\nX = \\begin{pmatrix} x_1^T \\\\ x_2^T \\\\ \\vdots \\\\ x_N^T \\end{pmatrix} \\in \\mathbb{R}^{N \\times D}\n\nFor the Olivetti dataset, N = 400 and each face is 64 \\times 64, meaning D = 4096.\n\nStep 1: Mean Centering\nCompute the empirical mean vector \\mu \\in \\mathbb{R}^D:\n\n\\mu = \\frac{1}{N} \\sum_{i=1}^N x_i\n\nThe centered data matrix \\tilde{X} is defined by subtracting \\mu from every row:\n\n\\tilde{X} = X - \\mathbf{1}_N \\mu^T \\in \\mathbb{R}^{N \\times D}\n\n\n\nStep 2: Covariance Matrix & Eigendecomposition\nThe sample covariance matrix \\Sigma \\in \\mathbb{R}^{D \\times D} is:\n\n\\Sigma = \\frac{1}{N - 1} \\tilde{X}^T \\tilde{X}\n\nSince \\Sigma is symmetric and positive semi-definite, the Spectral Theorem guarantees an orthonormal basis of eigenvectors v_1, v_2, \\dots, v_D \\in \\mathbb{R}^D with real non-negative eigenvalues:\n\n\\Sigma v_i = \\lambda_i v_i, \\quad \\lambda_1 \\ge \\lambda_2 \\ge \\dots \\ge \\lambda_D \\ge 0\n\n\n\nStep 3: Computational Trick for High Dimensions (N \\ll D)\nNotice that \\Sigma has dimensions 4096 \\times 4096 (\\approx 16.8 \\times 10^6 entries). Direct eigendecomposition of a 4096 \\times 4096 matrix is computationally intensive.\nHowever, since N = 400 \\ll D = 4096, \\text{rank}(\\tilde{X}) \\le N - 1 = 399. Following Sirovich & Kirby (1987), we can consider the smaller N \\times N inner product (Gram) matrix:\n\nK = \\frac{1}{N - 1} \\tilde{X} \\tilde{X}^T \\in \\mathbb{R}^{N \\times N}\n\nIf u_i \\in \\mathbb{R}^N is an eigenvector of K with eigenvalue \\lambda_i:\n\n\\frac{1}{N - 1} \\tilde{X} \\tilde{X}^T u_i = \\lambda_i u_i \\implies \\frac{1}{N - 1} \\tilde{X}^T \\tilde{X} (\\tilde{X}^T u_i) = \\lambda_i (\\tilde{X}^T u_i)\n\nThus, v_i \\propto \\tilde{X}^T u_i is an eigenvector of \\Sigma! Normalizing v_i = \\frac{\\tilde{X}^T u_i}{\\|\\tilde{X}^T u_i\\|} yields the exact principal components in \\mathcal{O}(N^3) time instead of \\mathcal{O}(D^3) time.\n\n\nStep 4: Subspace Selection (90% Explained Variance)\nThe proportion of total variance explained by the top k principal components is:\n\n\\eta(k) = \\frac{\\sum_{i=1}^k \\lambda_i}{\\sum_{i=1}^{\\min(N-1, D)} \\lambda_i}\n\nWe select the smallest k such that \\eta(k) \\ge 0.90.\n\n\nStep 5: Projection and Reconstruction\nLet V_k = (v_1, \\dots, v_k) \\in \\mathbb{R}^{D \\times k} be the projection matrix. The low-dimensional representation Z \\in \\mathbb{R}^{N \\times k} and the reconstructed faces \\hat{X} \\in \\mathbb{R}^{N \\times D} are:\n\nZ = \\tilde{X} V_k, \\qquad \\hat{X} = Z V_k^T + \\mathbf{1}_N \\mu^T"
   },
   {
-    "objectID": "blog/post_11-09-24.html#the-iris-dataset",
-    "href": "blog/post_11-09-24.html#the-iris-dataset",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
-    "section": "The Iris Dataset",
-    "text": "The Iris Dataset\nThe Iris dataset consists of measurements from three types of Iris flowers: Setosa, Versicolor, and Virginica. For this demonstration, we’ll focus on Iris Setosa and Iris Versicolor.\n\nReplicating the KNN Algorithm\nHere’s a brief overview of the KNN algorithm implemented from scratch:\nimport numpy as np\nfrom collections import Counter\n\ndef distance(x, y):\n    return np.linalg.norm(x - y)\n\ndef scan_sorroundings(dataset, x, k):\n    distances = []\n    for point in dataset:\n        coord, label = point[0], point[1]\n        dist = distance(x, coord)\n        distances.append((dist, label))\n    distances.sort(key=lambda pair: pair[0])\n    return [label for _, label in distances[:k]]\n\ndef classify_new_point(dataset, x, k):\n    neighbors = scan_sorroundings(dataset, x, k)\n    most_common_label = Counter(neighbors).most_common(1)[0][0]\n    return most_common_label"
+    "objectID": "blog/post_08-11-24.html#the-olivetti-faces-dataset",
+    "href": "blog/post_08-11-24.html#the-olivetti-faces-dataset",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "2. The Olivetti Faces Dataset",
+    "text": "2. The Olivetti Faces Dataset\nThe dataset consists of 400 grayscale images representing 40 individuals (10 distinct images per subject with varying lighting, facial expressions, and angles):\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import fetch_olivetti_faces\n\n# Load faces dataset\nfaces_data = fetch_olivetti_faces(shuffle=True, random_state=42)\nfaces = faces_data.images  # shape: (400, 64, 64)\nX = faces_data.data        # shape: (400, 4096)\nn_samples, n_features = X.shape\n\nprint(f\"Dataset shape: {n_samples} samples, {n_features} features per sample.\")\n\n\n\nSample Grid from the Olivetti Faces Dataset"
   },
   {
-    "objectID": "blog/post_11-09-24.html#testing-on-the-iris-dataset",
-    "href": "blog/post_11-09-24.html#testing-on-the-iris-dataset",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
-    "section": "Testing on the Iris Dataset",
-    "text": "Testing on the Iris Dataset\nWe applied the KNN algorithm to the Iris dataset, focusing on two classes: Iris Setosa and Iris Versicolor. Here’s the code for loading the dataset and classifying a new point:\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\n\niris = load_iris()\ndata = iris['data']\nlabels = iris['target']\n\nbinary_data = data[labels != 2][:, :2]\nbinary_labels = labels[labels != 2]\n\ntrain_data, test_data, train_labels, test_labels = train_test_split(binary_data, binary_labels, test_size=0.2, random_state=42)\ntrain_dataset = [(train_data[i], train_labels[i]) for i in range(len(train_data))]\n\ntest_point = test_data[0]\nk = 3\nassigned_label = classify_new_point(train_dataset, test_point, k)"
+    "objectID": "blog/post_08-11-24.html#scikit-learn-pca-benchmark",
+    "href": "blog/post_08-11-24.html#scikit-learn-pca-benchmark",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "3. Scikit-Learn PCA Benchmark",
+    "text": "3. Scikit-Learn PCA Benchmark\nWe first establish a baseline using sklearn.decomposition.PCA configured to retain 90% of the variance:\nfrom sklearn.decomposition import PCA\n\n# Fit scikit-learn PCA retaining 90% of explained variance\npca_sklearn = PCA(n_components=0.90, svd_solver='full')\nX_sklearn_trans = pca_sklearn.fit_transform(X)\nX_sklearn_recon = pca_sklearn.inverse_transform(X_sklearn_trans)\n\nprint(f\"Components selected by scikit-learn for 90% variance: {pca_sklearn.n_components_}\")"
   },
   {
-    "objectID": "blog/post_11-09-24.html#visualizing-the-results",
-    "href": "blog/post_11-09-24.html#visualizing-the-results",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
-    "section": "Visualizing the Results",
-    "text": "Visualizing the Results\nThe following code visualizes the dataset and includes an image of the predicted flower type:\nimport matplotlib.pyplot as plt\nimport matplotlib.image as mpimg\n\ndef plot_knn_result_with_image(dataset, x, k, assigned_label):\n    A_points = np.array([point[0] for point in dataset if point[1] == 0])\n    B_points = np.array([point[0] for point in dataset if point[1] == 1])\n\n    plt.scatter(A_points[:, 0], A_points[:, 1], color='red', label='Iris Setosa')\n    plt.scatter(B_points[:, 0], B_points[:, 1], color='blue', label='Iris Versicolor')\n\n    if assigned_label == 0:\n        plt.scatter(x[0], x[1], color='red', marker='x', s=100)\n        image_path = 'iris_setosa.jpg'\n    else:\n        plt.scatter(x[0], x[1], color='blue', marker='x', s=100)\n        image_path = 'iris_versicolor.jpg'\n\n    plt.legend()\n    plt.xlabel('Sepal Length')\n    plt.ylabel('Sepal Width')\n    plt.title(f'KNN Classification (k={k})')\n    plt.show()\n\n    img = mpimg.imread(image_path)\n    plt.imshow(img)\n    plt.axis('off')\n    plt.title(f'Predicted Flower: {\"Iris Setosa\" if assigned_label == 0 else \"Iris Versicolor\"}')\n    plt.show()\n\nplot_knn_result_with_image(train_dataset, test_point, k, assigned_label)"
+    "objectID": "blog/post_08-11-24.html#custom-pca-implementation-from-scratch",
+    "href": "blog/post_08-11-24.html#custom-pca-implementation-from-scratch",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "4. Custom PCA Implementation from Scratch",
+    "text": "4. Custom PCA Implementation from Scratch\nBelow is the complete implementation of PCA in pure NumPy:\nclass CustomPCA:\n    def __init__(self, variance_threshold=0.90):\n        self.variance_threshold = variance_threshold\n        self.mean_ = None\n        self.components_ = None\n        self.explained_variance_ratio_ = None\n        self.n_components_ = None\n\n    def fit(self, X):\n        # 1. Compute empirical mean and center the data\n        self.mean_ = np.mean(X, axis=0)\n        X_centered = X - self.mean_\n        n_samples, n_features = X.shape\n\n        # 2. Compute inner product matrix (Sirovich-Kirby technique)\n        # K has shape (N, N) which is 400x400 instead of 4096x4096\n        K = np.dot(X_centered, X_centered.T) / (n_samples - 1)\n\n        # 3. Compute eigenvalues and eigenvectors of K\n        eigvals, eigvecs = np.linalg.eigh(K)\n\n        # Sort in descending order\n        idx = np.argsort(eigvals)[::-1]\n        eigvals = np.maximum(eigvals[idx], 0)  # enforce numerical non-negativity\n        eigvecs = eigvecs[:, idx]\n\n        # 4. Map back to feature-space eigenvectors V = X^T * U\n        V = np.dot(X_centered.T, eigvecs)\n        # Normalize each column of V to unit length\n        norms = np.linalg.norm(V, axis=0, keepdims=True)\n        norms[norms == 0] = 1.0\n        V = V / norms\n\n        # 5. Compute explained variance ratios\n        total_variance = np.sum(eigvals)\n        explained_variance_ratio = eigvals / total_variance\n\n        # 6. Select k components to satisfy the variance threshold\n        cumulative_variance = np.cumsum(explained_variance_ratio)\n        k = np.searchsorted(cumulative_variance, self.variance_threshold) + 1\n\n        self.n_components_ = k\n        self.components_ = V[:, :k].T  # shape: (k, D)\n        self.explained_variance_ratio_ = explained_variance_ratio[:k]\n\n        return self\n\n    def transform(self, X):\n        X_centered = X - self.mean_\n        return np.dot(X_centered, self.components_.T)\n\n    def inverse_transform(self, Z):\n        return np.dot(Z, self.components_) + self.mean_\nFit our custom implementation on the same dataset:\ncustom_pca = CustomPCA(variance_threshold=0.90)\ncustom_pca.fit(X)\nX_custom_trans = custom_pca.transform(X)\nX_custom_recon = custom_pca.inverse_transform(X_custom_trans)\n\nprint(f\"Custom PCA selected: {custom_pca.n_components_} components.\")"
   },
   {
-    "objectID": "blog/post_11-09-24.html#plot-of-a-classification-result",
-    "href": "blog/post_11-09-24.html#plot-of-a-classification-result",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
-    "section": "Plot of a classification result",
-    "text": "Plot of a classification result\n\n\n\n\n\n\nFigure 1: Classification of a test point"
+    "objectID": "blog/post_08-11-24.html#visualizing-the-eigenfaces",
+    "href": "blog/post_08-11-24.html#visualizing-the-eigenfaces",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "5. Visualizing the Eigenfaces",
+    "text": "5. Visualizing the Eigenfaces\nEach principal component row in components_ has dimension 4096 and can be reshaped back into a 64 \\times 64 matrix. These are the orthogonal basis directions in image space:\nfig, axes = plt.subplots(2, 5, figsize=(12, 5),\n                         subplot_kw={'xticks':[], 'yticks':[]})\nfor i, ax in enumerate(axes.flat):\n    eigenface = custom_pca.components_[i].reshape(64, 64)\n    ax.imshow(eigenface, cmap='gray')\n    ax.set_title(f\"PC {i+1} ({custom_pca.explained_variance_ratio_[i]*100:.1f}%)\")\nplt.tight_layout()\nplt.show()\n\n\n\nTop Principal Components (Eigenfaces)\n\n\nNotice how the earliest principal components capture global lighting and head shape, while subsequent components isolate fine localized features like eyewear, hairline, and facial contours.\n\n\n\nExtended Set of Eigenfaces"
   },
   {
-    "objectID": "blog/post_11-09-24.html#the-two-species-of-iris-classified",
-    "href": "blog/post_11-09-24.html#the-two-species-of-iris-classified",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
-    "section": "The two species of iris classified",
-    "text": "The two species of iris classified\n\n\n\n\n\n\n\n\n\nFigure 2: Iris Versicolor\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Iris Setosa\n\n\n\n\n\n\n\nPhoto of Iris Versicolor (Blue flag flower) by Danielle Langlois, taken in July 2005 at Forillon National Park, Quebec, Canada. License: CC BY-SA 3.0. File.\n\n\nPhoto of Iris Setosa by Radomil. License: GNU Free Documentation License, Version 1.2 or later."
+    "objectID": "blog/post_08-11-24.html#image-compression-reconstruction",
+    "href": "blog/post_08-11-24.html#image-compression-reconstruction",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "6. Image Compression & Reconstruction",
+    "text": "6. Image Compression & Reconstruction\nBy projecting an image onto only the top k components (reducing features from 4096 down to roughly 65-75), we compress the image by over 98% while retaining 90% of the statistical variance:\n\n\n\nOriginal vs. Compressed Image at 90% Variance"
   },
   {
-    "objectID": "blog/post_11-09-24.html#credits",
-    "href": "blog/post_11-09-24.html#credits",
-    "title": "Implementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset",
-    "section": "Credits",
-    "text": "Credits\n\nK-Nearest Neighbors Algorithm:\nThis implementation was adapted from the tutorial provided by Jason Brownlee, “Tutorial to Implement k-Nearest Neighbors in Python from Scratch.”\nSource: Machine Learning Mastery\nIris Dataset:\nThe dataset used in this post is the famous Iris dataset. It is available through the Scikit-learn library.\nVisualizations:\nVisualizations were created using the Matplotlib library."
+    "objectID": "blog/post_08-11-24.html#numerical-verification-against-scikit-learn",
+    "href": "blog/post_08-11-24.html#numerical-verification-against-scikit-learn",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "7. Numerical Verification Against Scikit-Learn",
+    "text": "7. Numerical Verification Against Scikit-Learn\nTo confirm mathematical correctness, we quantify the reconstruction difference between our custom implementation and scikit-learn:\n# Compute Mean Absolute Error between reconstructions\nmae_diff = np.mean(np.abs(X_custom_recon - X_sklearn_recon))\nmax_diff = np.max(np.abs(X_custom_recon - X_sklearn_recon))\n\nprint(f\"Mean Absolute Difference: {mae_diff:.6e}\")\nprint(f\"Max Absolute Difference:  {max_diff:.6e}\")\nThe difference is on the order of 10^{-14}, which is machine-precision zero:\n\n\n\nReconstruction Comparison: Custom NumPy vs. scikit-learn"
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "Matteo Aldovardi",
-    "section": "Welcome",
-    "text": "Welcome\nHello and welcome! I am Matteo Aldovardi, a mathematician and machine learning practitioner with a background in harmonic analysis, operator theory, and 3D computer vision.\nThis site serves as an open portfolio and knowledge hub where I share: - Portfolio: Industry projects (such as 3D aerial scene reconstruction at Leonardo Velivoli), pure math research publications, and machine learning implementations. - Blog: In-depth tutorials and code implementations in machine learning, mathematical modeling, and data science. - About Me: Academic journey, technical background, and downloadable CV."
+    "objectID": "blog/post_08-11-24.html#conclusion",
+    "href": "blog/post_08-11-24.html#conclusion",
+    "title": "Understanding PCA and Eigenfaces with the Olivetti Dataset",
+    "section": "Conclusion",
+    "text": "Conclusion\nBy leveraging the Sirovich-Kirby inner product formulation, we converted an expensive \\mathcal{O}(D^3) eigendecomposition into an efficient \\mathcal{O}(N^3) procedure that produces exact principal components. The resulting basis vectors capture the dominant geometric variations of human faces, enabling high-ratio compression and fast subspace retrieval."
   },
   {
     "objectID": "index.html#recent-articles",
     "href": "index.html#recent-articles",
     "title": "Matteo Aldovardi",
     "section": "Recent Articles",
-    "text": "Recent Articles\n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA with the Olivetti Faces Dataset\n\n1 min\n\n\nMachine Learning\n\nPCA\n\nData Analysis\n\n\n\nExploring Principal Component Analysis (PCA) on the Olivetti Faces dataset: comparing a custom from-scratch implementation against scikit-learn to compress facial images.\n\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n4 min\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nImplementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset\n\n3 min\n\n\nMachine Learning\n\nKNN\n\nPython\n\n\n\nA ground-up implementation of the K-Nearest Neighbors algorithm in Python, evaluated on the classic Iris dataset with visual decision boundaries.\n\n\n\nSep 11, 2024\n\n\n\n\n\n\nNo matching items\n\n\nExplore All Articles →"
-  },
-  {
-    "objectID": "blog/post_08-11-24.html",
-    "href": "blog/post_08-11-24.html",
-    "title": "Understanding PCA with the Olivetti Faces Dataset",
-    "section": "",
-    "text": "PCA Implementation and Comparison with sklearn\nIn this notebook, I explore Principal Component Analysis (PCA) using the Olivetti Faces dataset, which is available through the sklearn library.\nIn the first part, I apply PCA using the official sklearn implementation to compress one of the images in the dataset into a subspace defined by eigenvectors that explain 90% of the variance. The result is visualized for comparison. The code for this section is taken directly from the official sklearn website and is licensed under the BSD 3-Clause License. The full license text, including the copyright notice and disclaimer, is included in the source code provided.\nIn the second part, I implement a basic, custom version of PCA and apply it to compress the same image into a subspace defined by the eigenvectors that explain 90% of the variance. I then compare the results of this custom (naive) implementation with those obtained using the sklearn PCA algorithm.\nLicense Information: The code from the official sklearn website, used in the first part of this notebook, is licensed under the BSD 3-Clause License. The full text of the license can be found below."
+    "text": "Recent Articles\n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA and Eigenfaces with the Olivetti Dataset\n\n7 min\n\n\nMachine Learning\n\nLinear Algebra\n\nPCA\n\nComputer Vision\n\n\n\nDeriving Principal Component Analysis from spectral theory, implementing it from scratch in NumPy, and compressing high-dimensional facial images.\n\n\n\nNov 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n4 min\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\nSep 18, 2024\n\n\n\n\n\n\nNo matching items\n\n\nExplore All Articles →"
   },
   {
     "objectID": "blog/index.html",
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA with the Olivetti Faces Dataset\n\n\n\nMachine Learning\n\nPCA\n\nData Analysis\n\n\n\nExploring Principal Component Analysis (PCA) on the Olivetti Faces dataset: comparing a custom from-scratch implementation against scikit-learn to compress facial images.\n\n\n\n\n\nNov 8, 2024\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\n\n\nSep 18, 2024\n\n4 min\n\n\n\n\n\n\n\n\n\n\n\nImplementing K-Nearest Neighbors (KNN) from Scratch Using the Iris Dataset\n\n\n\nMachine Learning\n\nKNN\n\nPython\n\n\n\nA ground-up implementation of the K-Nearest Neighbors algorithm in Python, evaluated on the classic Iris dataset with visual decision boundaries.\n\n\n\n\n\nSep 11, 2024\n\n3 min\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nUnderstanding PCA and Eigenfaces with the Olivetti Dataset\n\n\n\nMachine Learning\n\nLinear Algebra\n\nPCA\n\nComputer Vision\n\n\n\nDeriving Principal Component Analysis from spectral theory, implementing it from scratch in NumPy, and compressing high-dimensional facial images.\n\n\n\n\n\nNov 8, 2024\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\nTraining and Visualizing a PPO Agent on CartPole using Stable Baselines3\n\n\n\nReinforcement Learning\n\nStable Baselines3\n\nCartPole\n\nPPO\n\n\n\nTraining a Proximal Policy Optimization (PPO) reinforcement learning agent on the Gymnasium CartPole environment using Stable Baselines3, with video evaluations.\n\n\n\n\n\nSep 18, 2024\n\n4 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
